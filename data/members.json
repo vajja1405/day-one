@@ -1,0 +1,167 @@
+[
+  {
+    "member_id": "SYN-001",
+    "age_band": "65\u201369",
+    "sex": "female",
+    "scenario": "rich",
+    "record_completeness": 1.0,
+    "findings_count": 6,
+    "status_counts": {
+      "suggest_confirm": 3,
+      "insufficient_evidence": 3
+    },
+    "synthetic": true,
+    "source_document_count": 9
+  },
+  {
+    "member_id": "SYN-002",
+    "age_band": "70\u201374",
+    "sex": "male",
+    "scenario": "rich",
+    "record_completeness": 0.75,
+    "findings_count": 6,
+    "status_counts": {
+      "insufficient_evidence": 3,
+      "suggest_confirm": 3
+    },
+    "synthetic": true,
+    "source_document_count": 5
+  },
+  {
+    "member_id": "SYN-003",
+    "age_band": "75\u201379",
+    "sex": "female",
+    "scenario": "rich",
+    "record_completeness": 1.0,
+    "findings_count": 6,
+    "status_counts": {
+      "suggest_confirm": 2,
+      "insufficient_evidence": 4
+    },
+    "synthetic": true,
+    "source_document_count": 7
+  },
+  {
+    "member_id": "SYN-004",
+    "age_band": "80\u201384",
+    "sex": "male",
+    "scenario": "sparse",
+    "record_completeness": 0.4,
+    "findings_count": 6,
+    "status_counts": {
+      "insufficient_evidence": 6
+    },
+    "synthetic": true,
+    "source_document_count": 1
+  },
+  {
+    "member_id": "SYN-005",
+    "age_band": "65\u201369",
+    "sex": "female",
+    "scenario": "sparse",
+    "record_completeness": 0.4,
+    "findings_count": 6,
+    "status_counts": {
+      "insufficient_evidence": 6
+    },
+    "synthetic": true,
+    "source_document_count": 1
+  },
+  {
+    "member_id": "SYN-006",
+    "age_band": "70\u201374",
+    "sex": "male",
+    "scenario": "sparse",
+    "record_completeness": 0.4,
+    "findings_count": 6,
+    "status_counts": {
+      "insufficient_evidence": 6
+    },
+    "synthetic": true,
+    "source_document_count": 1
+  },
+  {
+    "member_id": "SYN-007",
+    "age_band": "75\u201379",
+    "sex": "female",
+    "scenario": "contradictory",
+    "record_completeness": 1.0,
+    "findings_count": 6,
+    "status_counts": {
+      "contradicted": 3,
+      "insufficient_evidence": 3
+    },
+    "synthetic": true,
+    "source_document_count": 13
+  },
+  {
+    "member_id": "SYN-008",
+    "age_band": "80\u201384",
+    "sex": "male",
+    "scenario": "contradictory",
+    "record_completeness": 0.75,
+    "findings_count": 6,
+    "status_counts": {
+      "insufficient_evidence": 3,
+      "contradicted": 3
+    },
+    "synthetic": true,
+    "source_document_count": 8
+  },
+  {
+    "member_id": "SYN-009",
+    "age_band": "65\u201369",
+    "sex": "female",
+    "scenario": "stale",
+    "record_completeness": 1.0,
+    "findings_count": 6,
+    "status_counts": {
+      "contradicted": 2,
+      "insufficient_evidence": 4
+    },
+    "synthetic": true,
+    "source_document_count": 10
+  },
+  {
+    "member_id": "SYN-010",
+    "age_band": "70\u201374",
+    "sex": "male",
+    "scenario": "stale",
+    "record_completeness": 1.0,
+    "findings_count": 6,
+    "status_counts": {
+      "insufficient_evidence": 4,
+      "contradicted": 2
+    },
+    "synthetic": true,
+    "source_document_count": 7
+  },
+  {
+    "member_id": "SYN-011",
+    "age_band": "75\u201379",
+    "sex": "female",
+    "scenario": "already_documented",
+    "record_completeness": 1.0,
+    "findings_count": 6,
+    "status_counts": {
+      "already_documented": 3,
+      "insufficient_evidence": 3
+    },
+    "synthetic": true,
+    "source_document_count": 12
+  },
+  {
+    "member_id": "SYN-012",
+    "age_band": "80\u201384",
+    "sex": "male",
+    "scenario": "already_documented",
+    "record_completeness": 0.75,
+    "findings_count": 6,
+    "status_counts": {
+      "insufficient_evidence": 3,
+      "already_documented": 3
+    },
+    "synthetic": true,
+    "source_document_count": 8
+  }
+]

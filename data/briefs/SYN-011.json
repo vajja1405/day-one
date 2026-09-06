@@ -1,0 +1,426 @@
+{
+  "member_id": "SYN-011",
+  "generated_at": "2026-09-06T21:54:43.895835Z",
+  "as_of": "2026-09-06",
+  "synthetic": true,
+  "record_completeness": 1.0,
+  "confidence_note": "Uncalibrated heuristic confidence in the record status, not disease probability.",
+  "findings": [
+    {
+      "finding_id": "SYN-011-ckd",
+      "condition_key": "ckd",
+      "label": "Review external chronic kidney disease history",
+      "status": "already_documented",
+      "confidence": 0.96,
+      "evidence_for": [
+        {
+          "source_doc_id": "SYN-011-ckd-history",
+          "date": "2026-02-12",
+          "detail": "SYNTHETIC. Nephrology clinician documents chronic kidney disease; eGFR 44 and 46 on measurements five months apart, with longitudinal assessment. External history awaits reconciliation at the first visit.",
+          "recency_days": 206
+        },
+        {
+          "source_doc_id": "SYN-011-ckd-chart",
+          "date": "2026-08-04",
+          "detail": "SYNTHETIC. Current chart already lists chronic kidney disease (N18.9); retain the documented history for clinician review, without a duplicate suggestion.",
+          "recency_days": 33
+        }
+      ],
+      "evidence_against": [],
+      "context_evidence": [
+        {
+          "source_doc_id": "SYN-011-ckd-lab",
+          "date": "2026-02-12",
+          "detail": "SYNTHETIC. eGFR: 44 mL/min/1.73m2; LOINC 33914-3. This isolated result cannot establish chronic kidney disease.",
+          "recency_days": 206
+        },
+        {
+          "source_doc_id": "SYN-011-ckd-chart",
+          "date": "2026-08-04",
+          "detail": "SYNTHETIC. Current chart already lists chronic kidney disease (N18.9); retain the documented history for clinician review, without a duplicate suggestion.",
+          "recency_days": 33
+        }
+      ],
+      "reasoning": "The current chart already contains this history in SYN-011-ckd-history, SYN-011-ckd-chart, SYN-011-ckd-lab. Review the existing entry without duplicating it.",
+      "recommended_action": "already_on_chart",
+      "automation_level": "recommend_only",
+      "human_review_required": false,
+      "derivation": [
+        "rule:already_coded"
+      ],
+      "flags": [
+        "uncalibrated_heuristic"
+      ],
+      "knowledge_references": [
+        {
+          "snippet_id": "KB-CKD-01",
+          "condition_key": "ckd",
+          "title": "Kidney history requires longitudinal context",
+          "text": "Chronic kidney disease assessment concerns abnormalities persisting for at least three months. One low eGFR during an acute illness cannot establish chronicity; retrieve longitudinal measurements and the clinician assessment.",
+          "source_url": "https://www.kidney.org/kidney-failure-risk-factor-estimated-glomerular-filtration-rate-egfr",
+          "reviewed_at": "2026-09-06"
+        }
+      ]
+    },
+    {
+      "finding_id": "SYN-011-chf",
+      "condition_key": "chf",
+      "label": "Review external heart failure history",
+      "status": "already_documented",
+      "confidence": 0.96,
+      "evidence_for": [
+        {
+          "source_doc_id": "SYN-011-chf-history",
+          "date": "2026-02-12",
+          "detail": "SYNTHETIC. Cardiology clinician documents heart failure after clinical assessment and echocardiogram review. External history awaits reconciliation at the first visit.",
+          "recency_days": 206
+        },
+        {
+          "source_doc_id": "SYN-011-chf-chart",
+          "date": "2026-08-04",
+          "detail": "SYNTHETIC. Current chart already lists heart failure (I50.9); retain the documented history for clinician review, without a duplicate suggestion.",
+          "recency_days": 33
+        }
+      ],
+      "evidence_against": [],
+      "context_evidence": [
+        {
+          "source_doc_id": "SYN-011-chf-lab",
+          "date": "2026-02-12",
+          "detail": "SYNTHETIC. BNP: 310 pg/mL; LOINC 30934-4. This isolated result cannot establish heart failure.",
+          "recency_days": 206
+        },
+        {
+          "source_doc_id": "SYN-011-chf-chart",
+          "date": "2026-08-04",
+          "detail": "SYNTHETIC. Current chart already lists heart failure (I50.9); retain the documented history for clinician review, without a duplicate suggestion.",
+          "recency_days": 33
+        }
+      ],
+      "reasoning": "The current chart already contains this history in SYN-011-chf-history, SYN-011-chf-chart, SYN-011-chf-lab. Review the existing entry without duplicating it.",
+      "recommended_action": "already_on_chart",
+      "automation_level": "recommend_only",
+      "human_review_required": false,
+      "derivation": [
+        "rule:already_coded"
+      ],
+      "flags": [
+        "uncalibrated_heuristic"
+      ],
+      "knowledge_references": [
+        {
+          "snippet_id": "KB-INTAKE-HF",
+          "condition_key": "chf",
+          "title": "Prototype documentation policy: heart failure",
+          "text": "Review the external clinician assessment and supporting cardiac workup. A historical BNP result or diuretic prescription alone is not adequate patient-specific support in this demonstration.",
+          "source_url": "https://www.nice.org.uk/guidance/ng106/chapter/recommendations",
+          "reviewed_at": "2026-09-06"
+        }
+      ]
+    },
+    {
+      "finding_id": "SYN-011-copd",
+      "condition_key": "copd",
+      "label": "Review external copd history",
+      "status": "insufficient_evidence",
+      "confidence": 0.88,
+      "evidence_for": [],
+      "evidence_against": [],
+      "context_evidence": [],
+      "reasoning": "The supplied record contains no adequate documentation of this history. Request additional records rather than infer a condition.",
+      "recommended_action": "no_action",
+      "automation_level": "recommend_only",
+      "human_review_required": false,
+      "derivation": [
+        "rule:no_adequate_documentation"
+      ],
+      "flags": [
+        "uncalibrated_heuristic"
+      ],
+      "knowledge_references": [
+        {
+          "snippet_id": "KB-COPD-01",
+          "condition_key": "copd",
+          "title": "COPD history needs clinical and spirometry context",
+          "text": "COPD diagnosis requires appropriate clinical context and spirometry assessment. An inhaler or a respiratory symptom alone is insufficient to establish the diagnosis.",
+          "source_url": "https://goldcopd.org/gold-spirometry-guide/",
+          "reviewed_at": "2026-09-06"
+        }
+      ]
+    },
+    {
+      "finding_id": "SYN-011-diabetes",
+      "condition_key": "diabetes",
+      "label": "Review external type 2 diabetes history",
+      "status": "already_documented",
+      "confidence": 0.96,
+      "evidence_for": [
+        {
+          "source_doc_id": "SYN-011-diabetes-history",
+          "date": "2026-02-12",
+          "detail": "SYNTHETIC. Endocrinology clinician documents type 2 diabetes after repeated testing and clinical assessment. External history awaits reconciliation at the first visit.",
+          "recency_days": 206
+        },
+        {
+          "source_doc_id": "SYN-011-diabetes-chart",
+          "date": "2026-08-04",
+          "detail": "SYNTHETIC. Current chart already lists type 2 diabetes (E11.9); retain the documented history for clinician review, without a duplicate suggestion.",
+          "recency_days": 33
+        }
+      ],
+      "evidence_against": [],
+      "context_evidence": [
+        {
+          "source_doc_id": "SYN-011-diabetes-lab",
+          "date": "2026-02-12",
+          "detail": "SYNTHETIC. Hemoglobin A1c: 7.4 %; LOINC 4548-4. This isolated result cannot establish type 2 diabetes.",
+          "recency_days": 206
+        },
+        {
+          "source_doc_id": "SYN-011-diabetes-chart",
+          "date": "2026-08-04",
+          "detail": "SYNTHETIC. Current chart already lists type 2 diabetes (E11.9); retain the documented history for clinician review, without a duplicate suggestion.",
+          "recency_days": 33
+        }
+      ],
+      "reasoning": "The current chart already contains this history in SYN-011-diabetes-history, SYN-011-diabetes-chart, SYN-011-diabetes-lab. Review the existing entry without duplicating it.",
+      "recommended_action": "already_on_chart",
+      "automation_level": "recommend_only",
+      "human_review_required": false,
+      "derivation": [
+        "rule:already_coded"
+      ],
+      "flags": [
+        "uncalibrated_heuristic"
+      ],
+      "knowledge_references": [
+        {
+          "snippet_id": "KB-INTAKE-DM",
+          "condition_key": "diabetes",
+          "title": "Prototype documentation policy: diabetes",
+          "text": "This demonstration surfaces a recent explicit external clinician assessment for reconciliation. Isolated laboratory results, medications and demographic risk never establish a condition within this software.",
+          "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis",
+          "reviewed_at": "2026-09-06"
+        }
+      ]
+    },
+    {
+      "finding_id": "SYN-011-af",
+      "condition_key": "af",
+      "label": "Review external atrial fibrillation history",
+      "status": "insufficient_evidence",
+      "confidence": 0.88,
+      "evidence_for": [],
+      "evidence_against": [],
+      "context_evidence": [],
+      "reasoning": "The supplied record contains no adequate documentation of this history. Request additional records rather than infer a condition.",
+      "recommended_action": "no_action",
+      "automation_level": "recommend_only",
+      "human_review_required": false,
+      "derivation": [
+        "rule:no_adequate_documentation"
+      ],
+      "flags": [
+        "uncalibrated_heuristic"
+      ],
+      "knowledge_references": [
+        {
+          "snippet_id": "KB-AF-01",
+          "condition_key": "af",
+          "title": "Atrial-fibrillation assessment relies on rhythm evidence",
+          "text": "NICE recommends a 12-lead ECG to diagnose suspected atrial fibrillation when an irregular pulse is detected. Review the tracing interpretation; anticoagulant use alone does not establish the indication.",
+          "source_url": "https://www.nice.org.uk/guidance/NG196/chapter/recommendations",
+          "reviewed_at": "2026-09-06"
+        }
+      ]
+    },
+    {
+      "finding_id": "SYN-011-depression",
+      "condition_key": "depression",
+      "label": "Review external depression history",
+      "status": "insufficient_evidence",
+      "confidence": 0.88,
+      "evidence_for": [],
+      "evidence_against": [],
+      "context_evidence": [],
+      "reasoning": "The supplied record contains no adequate documentation of this history. Request additional records rather than infer a condition.",
+      "recommended_action": "no_action",
+      "automation_level": "recommend_only",
+      "human_review_required": false,
+      "derivation": [
+        "rule:no_adequate_documentation"
+      ],
+      "flags": [
+        "uncalibrated_heuristic"
+      ],
+      "knowledge_references": [
+        {
+          "snippet_id": "KB-INTAKE-MOOD",
+          "condition_key": "depression",
+          "title": "Prototype documentation policy: depression",
+          "text": "Review the clinician's assessment and whether it was provisional or superseded. Medication use or a symptom mention alone does not establish a depression history in this demonstration.",
+          "source_url": "https://www.nice.org.uk/guidance/ng222/chapter/recommendations",
+          "reviewed_at": "2026-09-06"
+        }
+      ]
+    }
+  ],
+  "care_gaps": [
+    {
+      "gap_id": "range-O-SYN-011-ckd-earlier-lab",
+      "label": "Historical result to review: eGFR",
+      "reason": "46 mL/min/1.73m2 on 2025-09-10 (361 days old) is outside this fixture's reference interval; review chronology and subsequent records, without inferring a diagnosis.",
+      "recommended_action": "review_records_with_physician",
+      "evidence": [
+        {
+          "source_doc_id": "SYN-011-ckd-earlier-lab",
+          "date": "2025-09-10",
+          "detail": "SYNTHETIC. eGFR: 46 mL/min/1.73m2; LOINC 33914-3. Result requires longitudinal clinical interpretation.",
+          "recency_days": 361
+        }
+      ],
+      "reviewed_source_doc_ids": [
+        "SYN-011-ckd-earlier-lab",
+        "SYN-011-chf-history",
+        "SYN-011-chf-lab",
+        "SYN-011-ckd-history",
+        "SYN-011-ckd-lab",
+        "SYN-011-diabetes-history",
+        "SYN-011-diabetes-lab",
+        "SYN-011-chf-chart",
+        "SYN-011-ckd-chart",
+        "SYN-011-diabetes-chart",
+        "SYN-011-medications",
+        "SYN-011-intake"
+      ]
+    },
+    {
+      "gap_id": "range-O-SYN-011-chf-lab",
+      "label": "Historical result to review: BNP",
+      "reason": "310 pg/mL on 2026-02-12 (206 days old) is outside this fixture's reference interval; review chronology and subsequent records, without inferring a diagnosis.",
+      "recommended_action": "review_records_with_physician",
+      "evidence": [
+        {
+          "source_doc_id": "SYN-011-chf-lab",
+          "date": "2026-02-12",
+          "detail": "SYNTHETIC. BNP: 310 pg/mL; LOINC 30934-4. This isolated result cannot establish heart failure.",
+          "recency_days": 206
+        }
+      ],
+      "reviewed_source_doc_ids": [
+        "SYN-011-ckd-earlier-lab",
+        "SYN-011-chf-history",
+        "SYN-011-chf-lab",
+        "SYN-011-ckd-history",
+        "SYN-011-ckd-lab",
+        "SYN-011-diabetes-history",
+        "SYN-011-diabetes-lab",
+        "SYN-011-chf-chart",
+        "SYN-011-ckd-chart",
+        "SYN-011-diabetes-chart",
+        "SYN-011-medications",
+        "SYN-011-intake"
+      ]
+    },
+    {
+      "gap_id": "range-O-SYN-011-ckd-lab",
+      "label": "Historical result to review: eGFR",
+      "reason": "44 mL/min/1.73m2 on 2026-02-12 (206 days old) is outside this fixture's reference interval; review chronology and subsequent records, without inferring a diagnosis.",
+      "recommended_action": "review_records_with_physician",
+      "evidence": [
+        {
+          "source_doc_id": "SYN-011-ckd-lab",
+          "date": "2026-02-12",
+          "detail": "SYNTHETIC. eGFR: 44 mL/min/1.73m2; LOINC 33914-3. This isolated result cannot establish chronic kidney disease.",
+          "recency_days": 206
+        }
+      ],
+      "reviewed_source_doc_ids": [
+        "SYN-011-ckd-earlier-lab",
+        "SYN-011-chf-history",
+        "SYN-011-chf-lab",
+        "SYN-011-ckd-history",
+        "SYN-011-ckd-lab",
+        "SYN-011-diabetes-history",
+        "SYN-011-diabetes-lab",
+        "SYN-011-chf-chart",
+        "SYN-011-ckd-chart",
+        "SYN-011-diabetes-chart",
+        "SYN-011-medications",
+        "SYN-011-intake"
+      ]
+    },
+    {
+      "gap_id": "range-O-SYN-011-diabetes-lab",
+      "label": "Historical result to review: Hemoglobin A1c",
+      "reason": "7.4 % on 2026-02-12 (206 days old) is outside this fixture's reference interval; review chronology and subsequent records, without inferring a diagnosis.",
+      "recommended_action": "review_records_with_physician",
+      "evidence": [
+        {
+          "source_doc_id": "SYN-011-diabetes-lab",
+          "date": "2026-02-12",
+          "detail": "SYNTHETIC. Hemoglobin A1c: 7.4 %; LOINC 4548-4. This isolated result cannot establish type 2 diabetes.",
+          "recency_days": 206
+        }
+      ],
+      "reviewed_source_doc_ids": [
+        "SYN-011-ckd-earlier-lab",
+        "SYN-011-chf-history",
+        "SYN-011-chf-lab",
+        "SYN-011-ckd-history",
+        "SYN-011-ckd-lab",
+        "SYN-011-diabetes-history",
+        "SYN-011-diabetes-lab",
+        "SYN-011-chf-chart",
+        "SYN-011-ckd-chart",
+        "SYN-011-diabetes-chart",
+        "SYN-011-medications",
+        "SYN-011-intake"
+      ]
+    },
+    {
+      "gap_id": "preventive-history",
+      "label": "Preventive-care history not supplied",
+      "reason": "For this Medicare-age intake, ask about vaccination and screening history and obtain prior records; missing documentation does not prove overdue care.",
+      "recommended_action": "request_records",
+      "evidence": [],
+      "reviewed_source_doc_ids": [
+        "SYN-011-ckd-earlier-lab",
+        "SYN-011-chf-history",
+        "SYN-011-chf-lab",
+        "SYN-011-ckd-history",
+        "SYN-011-ckd-lab",
+        "SYN-011-diabetes-history",
+        "SYN-011-diabetes-lab",
+        "SYN-011-chf-chart",
+        "SYN-011-ckd-chart",
+        "SYN-011-diabetes-chart",
+        "SYN-011-medications",
+        "SYN-011-intake"
+      ]
+    }
+  ],
+  "medication_flags": [
+    {
+      "flag_id": "medication-reconciliation",
+      "label": "Confirm current medication use",
+      "reason": "External lists do not establish current use, indication or adherence; reconcile names, doses, allergies and discontinued items with the member and clinician.",
+      "recommended_action": "reconcile_with_physician",
+      "evidence": [
+        {
+          "source_doc_id": "SYN-011-medications",
+          "date": "2026-08-10",
+          "detail": "SYNTHETIC. External medication list, active as recorded: metformin. Indications, doses and current use need clinician reconciliation; a medication alone does not establish a condition.",
+          "recency_days": 27
+        }
+      ]
+    }
+  ],
+  "unknowns": [
+    "Which outside clinicians hold additional records?",
+    "What matters most to the member at the first visit?",
+    "What are the current medication doses and allergies?",
+    "Were vaccinations or preventive screening completed elsewhere?"
+  ],
+  "audit_id": "audit-0343f511-4789-48c2-95a3-9bfeffb61495"
+}

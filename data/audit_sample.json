@@ -1,0 +1,635 @@
+{
+  "audit_id": "audit-da6230a5-b448-43d0-a9d4-84e6e59834ca",
+  "timestamp": "2026-09-06T21:54:43.863391Z",
+  "as_of": "2026-09-06",
+  "member_id": "SYN-007",
+  "synthetic": true,
+  "source_documents": [
+    {
+      "doc_id": "SYN-007-chf-history",
+      "date": "2026-02-12",
+      "doc_type": "encounter_note",
+      "sha256": "74b6003a4498d5e149540d4475fb57885727ad437a9f4d444ea8ba03e8ab0c73",
+      "excerpt": "SYNTHETIC. Historical outside note records a provisional concern for heart failure; current status was not established."
+    },
+    {
+      "doc_id": "SYN-007-chf-lab",
+      "date": "2026-02-12",
+      "doc_type": "lab_result",
+      "sha256": "517defc3678178674d8e44bc6d38c182fb636d3bdf8069dcd3c23500eda2c576",
+      "excerpt": "SYNTHETIC. BNP: 310 pg/mL; LOINC 30934-4. This isolated result cannot establish heart failure."
+    },
+    {
+      "doc_id": "SYN-007-ckd-history",
+      "date": "2026-02-12",
+      "doc_type": "encounter_note",
+      "sha256": "add51d62fac60ad8862f57536e144a35fb1d5135050650474a11a807ef2a1ef0",
+      "excerpt": "SYNTHETIC. Historical outside note records a provisional concern for chronic kidney disease; current status was not established."
+    },
+    {
+      "doc_id": "SYN-007-ckd-lab",
+      "date": "2026-02-12",
+      "doc_type": "lab_result",
+      "sha256": "1b621ebfac67b074b7a8e533d75a832f868a39747a036bfd21ffcda8bc471baa",
+      "excerpt": "SYNTHETIC. eGFR: 44 mL/min/1.73m2; LOINC 33914-3. This isolated result cannot establish chronic kidney disease."
+    },
+    {
+      "doc_id": "SYN-007-diabetes-history",
+      "date": "2026-02-12",
+      "doc_type": "encounter_note",
+      "sha256": "9462063f8f3fbf01e79e609265ac689a8483bbf96b3c86d953edcde84af79783",
+      "excerpt": "SYNTHETIC. Historical outside note records a provisional concern for type 2 diabetes; current status was not established."
+    },
+    {
+      "doc_id": "SYN-007-diabetes-lab",
+      "date": "2026-02-12",
+      "doc_type": "lab_result",
+      "sha256": "b72dfad16ee0e9378892c7a9ccb73a243846f0f693be2dfe40de99d1439573ea",
+      "excerpt": "SYNTHETIC. Hemoglobin A1c: 7.4 %; LOINC 4548-4. This isolated result cannot establish type 2 diabetes."
+    },
+    {
+      "doc_id": "SYN-007-ckd-repeat",
+      "date": "2026-07-20",
+      "doc_type": "lab_result",
+      "sha256": "dbcea48b1ac1de97ae7aea14c08b9f9471098e9d823616ae123a09fe7b83b48d",
+      "excerpt": "SYNTHETIC. eGFR: 82 mL/min/1.73m2; LOINC 33914-3. Result reviewed in the subsequent clinician note."
+    },
+    {
+      "doc_id": "SYN-007-diabetes-repeat",
+      "date": "2026-07-20",
+      "doc_type": "lab_result",
+      "sha256": "24656eac0fc31afaf7b5cf6bde8642709aa8033b51cd6abd920d83174815e70d",
+      "excerpt": "SYNTHETIC. Hemoglobin A1c: 5.4 %; LOINC 4548-4. Result reviewed in the subsequent clinician note."
+    },
+    {
+      "doc_id": "SYN-007-chf-review",
+      "date": "2026-07-21",
+      "doc_type": "encounter_note",
+      "sha256": "e8dacaa83c9e841c8fda83c2d9e2ee23f8b325cc322aea953bb78b399a575fb2",
+      "excerpt": "SYNTHETIC. Follow-up cardiology review: heart failure ruled out following echocardiogram and clinical review; earlier BNP elevation was transient. Do not carry the historical suggestion forward."
+    },
+    {
+      "doc_id": "SYN-007-ckd-review",
+      "date": "2026-07-21",
+      "doc_type": "encounter_note",
+      "sha256": "a9f4e4f9e6d753e0aea502041a3dc3e9f92712bbce2d505f9ba75944fa3873a0",
+      "excerpt": "SYNTHETIC. Follow-up clinician review: chronic kidney disease ruled out; earlier low eGFR was transient during dehydration and has normalised on repeat testing. Do not carry the historical suggestion forward."
+    },
+    {
+      "doc_id": "SYN-007-diabetes-review",
+      "date": "2026-07-21",
+      "doc_type": "encounter_note",
+      "sha256": "63ee9e91710c21cb104144cbca4de3f4ff4e8acf71fe8dfea213130b09babbdf",
+      "excerpt": "SYNTHETIC. Follow-up clinician review: type 2 diabetes ruled out on repeat testing; earlier hyperglycemia was transient during steroid treatment and resolved. Do not carry the historical suggestion forward."
+    },
+    {
+      "doc_id": "SYN-007-medications",
+      "date": "2026-08-10",
+      "doc_type": "med_list",
+      "sha256": "9f13898aaeb0e15bdc86ff36b6cbb69789662be182c821a22c3c44d19d2815e6",
+      "excerpt": "SYNTHETIC. External medication list, active as recorded: acetaminophen. Indications, doses and current use need clinician reconciliation; a medication alone does not establish a condition."
+    },
+    {
+      "doc_id": "SYN-007-intake",
+      "date": "2026-08-25",
+      "doc_type": "encounter_note",
+      "sha256": "944acbb04c6fca8c0529d6ff5c51bba89fb8576b8fb6cb132962e1324873a9cf",
+      "excerpt": "SYNTHETIC. New-member intake. Outside records are partial; allergies, vaccination history, preventive screening history and member priorities still need reconciliation."
+    }
+  ],
+  "knowledge_base_version": "dayone-context-2026-09-06-v1",
+  "knowledge_base_sha256": "fec1b2783fa5685ea8c18ab65678be06e78396e4c5bba30345f11bd18c6cea50",
+  "deterministic_rules_fired": [
+    "rule:later_explicit_negation",
+    "rule:medication_list_reconciliation",
+    "rule:no_adequate_documentation",
+    "rule:outside_fixture_reference_range"
+  ],
+  "llm": {
+    "called": false,
+    "model": null,
+    "prompt_hash": null,
+    "validation_retries": 0,
+    "usage": {}
+  },
+  "candidate_outcomes": [
+    {
+      "candidate": {
+        "finding_id": "SYN-007-ckd",
+        "condition_key": "ckd",
+        "label": "Review external chronic kidney disease history",
+        "derivation": [
+          "rule:later_explicit_negation"
+        ],
+        "evidence_for": [
+          {
+            "source_doc_id": "SYN-007-ckd-history",
+            "date": "2026-02-12",
+            "detail": "SYNTHETIC. Historical outside note records a provisional concern for chronic kidney disease; current status was not established.",
+            "recency_days": 206
+          }
+        ],
+        "evidence_against": [
+          {
+            "source_doc_id": "SYN-007-ckd-review",
+            "date": "2026-07-21",
+            "detail": "SYNTHETIC. Follow-up clinician review: chronic kidney disease ruled out; earlier low eGFR was transient during dehydration and has normalised on repeat testing. Do not carry the historical suggestion forward.",
+            "recency_days": 47
+          }
+        ],
+        "context_evidence": [
+          {
+            "source_doc_id": "SYN-007-ckd-lab",
+            "date": "2026-02-12",
+            "detail": "SYNTHETIC. eGFR: 44 mL/min/1.73m2; LOINC 33914-3. This isolated result cannot establish chronic kidney disease.",
+            "recency_days": 206
+          }
+        ],
+        "knowledge": [
+          {
+            "snippet_id": "KB-CKD-01",
+            "condition_key": "ckd",
+            "title": "Kidney history requires longitudinal context",
+            "text": "Chronic kidney disease assessment concerns abnormalities persisting for at least three months. One low eGFR during an acute illness cannot establish chronicity; retrieve longitudinal measurements and the clinician assessment.",
+            "source_url": "https://www.kidney.org/kidney-failure-risk-factor-estimated-glomerular-filtration-rate-egfr",
+            "reviewed_at": "2026-09-06"
+          }
+        ],
+        "status_hint": "contradicted",
+        "support_adequate": false,
+        "retrieval_method": "keyword"
+      },
+      "final_status": "contradicted",
+      "final_finding": {
+        "finding_id": "SYN-007-ckd",
+        "condition_key": "ckd",
+        "label": "Review external chronic kidney disease history",
+        "status": "contradicted",
+        "confidence": 0.9,
+        "evidence_for": [
+          {
+            "source_doc_id": "SYN-007-ckd-history",
+            "date": "2026-02-12",
+            "detail": "SYNTHETIC. Historical outside note records a provisional concern for chronic kidney disease; current status was not established.",
+            "recency_days": 206
+          }
+        ],
+        "evidence_against": [
+          {
+            "source_doc_id": "SYN-007-ckd-review",
+            "date": "2026-07-21",
+            "detail": "SYNTHETIC. Follow-up clinician review: chronic kidney disease ruled out; earlier low eGFR was transient during dehydration and has normalised on repeat testing. Do not carry the historical suggestion forward.",
+            "recency_days": 47
+          }
+        ],
+        "context_evidence": [
+          {
+            "source_doc_id": "SYN-007-ckd-lab",
+            "date": "2026-02-12",
+            "detail": "SYNTHETIC. eGFR: 44 mL/min/1.73m2; LOINC 33914-3. This isolated result cannot establish chronic kidney disease.",
+            "recency_days": 206
+          }
+        ],
+        "reasoning": "The later clinician review in SYN-007-ckd-review, SYN-007-ckd-history argues against carrying this historical impression forward. Surface the record conflict for review without suggesting a new condition.",
+        "recommended_action": "no_action",
+        "automation_level": "recommend_only",
+        "human_review_required": true,
+        "derivation": [
+          "rule:later_explicit_negation"
+        ],
+        "flags": [
+          "uncalibrated_heuristic"
+        ],
+        "knowledge_references": [
+          {
+            "snippet_id": "KB-CKD-01",
+            "condition_key": "ckd",
+            "title": "Kidney history requires longitudinal context",
+            "text": "Chronic kidney disease assessment concerns abnormalities persisting for at least three months. One low eGFR during an acute illness cannot establish chronicity; retrieve longitudinal measurements and the clinician assessment.",
+            "source_url": "https://www.kidney.org/kidney-failure-risk-factor-estimated-glomerular-filtration-rate-egfr",
+            "reviewed_at": "2026-09-06"
+          }
+        ]
+      }
+    },
+    {
+      "candidate": {
+        "finding_id": "SYN-007-chf",
+        "condition_key": "chf",
+        "label": "Review external heart failure history",
+        "derivation": [
+          "rule:later_explicit_negation"
+        ],
+        "evidence_for": [
+          {
+            "source_doc_id": "SYN-007-chf-history",
+            "date": "2026-02-12",
+            "detail": "SYNTHETIC. Historical outside note records a provisional concern for heart failure; current status was not established.",
+            "recency_days": 206
+          }
+        ],
+        "evidence_against": [
+          {
+            "source_doc_id": "SYN-007-chf-review",
+            "date": "2026-07-21",
+            "detail": "SYNTHETIC. Follow-up cardiology review: heart failure ruled out following echocardiogram and clinical review; earlier BNP elevation was transient. Do not carry the historical suggestion forward.",
+            "recency_days": 47
+          }
+        ],
+        "context_evidence": [
+          {
+            "source_doc_id": "SYN-007-chf-lab",
+            "date": "2026-02-12",
+            "detail": "SYNTHETIC. BNP: 310 pg/mL; LOINC 30934-4. This isolated result cannot establish heart failure.",
+            "recency_days": 206
+          }
+        ],
+        "knowledge": [
+          {
+            "snippet_id": "KB-INTAKE-HF",
+            "condition_key": "chf",
+            "title": "Prototype documentation policy: heart failure",
+            "text": "Review the external clinician assessment and supporting cardiac workup. A historical BNP result or diuretic prescription alone is not adequate patient-specific support in this demonstration.",
+            "source_url": "https://www.nice.org.uk/guidance/ng106/chapter/recommendations",
+            "reviewed_at": "2026-09-06"
+          }
+        ],
+        "status_hint": "contradicted",
+        "support_adequate": false,
+        "retrieval_method": "keyword"
+      },
+      "final_status": "contradicted",
+      "final_finding": {
+        "finding_id": "SYN-007-chf",
+        "condition_key": "chf",
+        "label": "Review external heart failure history",
+        "status": "contradicted",
+        "confidence": 0.9,
+        "evidence_for": [
+          {
+            "source_doc_id": "SYN-007-chf-history",
+            "date": "2026-02-12",
+            "detail": "SYNTHETIC. Historical outside note records a provisional concern for heart failure; current status was not established.",
+            "recency_days": 206
+          }
+        ],
+        "evidence_against": [
+          {
+            "source_doc_id": "SYN-007-chf-review",
+            "date": "2026-07-21",
+            "detail": "SYNTHETIC. Follow-up cardiology review: heart failure ruled out following echocardiogram and clinical review; earlier BNP elevation was transient. Do not carry the historical suggestion forward.",
+            "recency_days": 47
+          }
+        ],
+        "context_evidence": [
+          {
+            "source_doc_id": "SYN-007-chf-lab",
+            "date": "2026-02-12",
+            "detail": "SYNTHETIC. BNP: 310 pg/mL; LOINC 30934-4. This isolated result cannot establish heart failure.",
+            "recency_days": 206
+          }
+        ],
+        "reasoning": "The later clinician review in SYN-007-chf-review, SYN-007-chf-history argues against carrying this historical impression forward. Surface the record conflict for review without suggesting a new condition.",
+        "recommended_action": "no_action",
+        "automation_level": "recommend_only",
+        "human_review_required": true,
+        "derivation": [
+          "rule:later_explicit_negation"
+        ],
+        "flags": [
+          "uncalibrated_heuristic"
+        ],
+        "knowledge_references": [
+          {
+            "snippet_id": "KB-INTAKE-HF",
+            "condition_key": "chf",
+            "title": "Prototype documentation policy: heart failure",
+            "text": "Review the external clinician assessment and supporting cardiac workup. A historical BNP result or diuretic prescription alone is not adequate patient-specific support in this demonstration.",
+            "source_url": "https://www.nice.org.uk/guidance/ng106/chapter/recommendations",
+            "reviewed_at": "2026-09-06"
+          }
+        ]
+      }
+    },
+    {
+      "candidate": {
+        "finding_id": "SYN-007-copd",
+        "condition_key": "copd",
+        "label": "Review external copd history",
+        "derivation": [
+          "rule:no_adequate_documentation"
+        ],
+        "evidence_for": [],
+        "evidence_against": [],
+        "context_evidence": [],
+        "knowledge": [
+          {
+            "snippet_id": "KB-COPD-01",
+            "condition_key": "copd",
+            "title": "COPD history needs clinical and spirometry context",
+            "text": "COPD diagnosis requires appropriate clinical context and spirometry assessment. An inhaler or a respiratory symptom alone is insufficient to establish the diagnosis.",
+            "source_url": "https://goldcopd.org/gold-spirometry-guide/",
+            "reviewed_at": "2026-09-06"
+          }
+        ],
+        "status_hint": "insufficient_evidence",
+        "support_adequate": false,
+        "retrieval_method": "keyword"
+      },
+      "final_status": "insufficient_evidence",
+      "final_finding": {
+        "finding_id": "SYN-007-copd",
+        "condition_key": "copd",
+        "label": "Review external copd history",
+        "status": "insufficient_evidence",
+        "confidence": 0.88,
+        "evidence_for": [],
+        "evidence_against": [],
+        "context_evidence": [],
+        "reasoning": "The supplied record contains no adequate documentation of this history. Request additional records rather than infer a condition.",
+        "recommended_action": "no_action",
+        "automation_level": "recommend_only",
+        "human_review_required": false,
+        "derivation": [
+          "rule:no_adequate_documentation"
+        ],
+        "flags": [
+          "uncalibrated_heuristic"
+        ],
+        "knowledge_references": [
+          {
+            "snippet_id": "KB-COPD-01",
+            "condition_key": "copd",
+            "title": "COPD history needs clinical and spirometry context",
+            "text": "COPD diagnosis requires appropriate clinical context and spirometry assessment. An inhaler or a respiratory symptom alone is insufficient to establish the diagnosis.",
+            "source_url": "https://goldcopd.org/gold-spirometry-guide/",
+            "reviewed_at": "2026-09-06"
+          }
+        ]
+      }
+    },
+    {
+      "candidate": {
+        "finding_id": "SYN-007-diabetes",
+        "condition_key": "diabetes",
+        "label": "Review external type 2 diabetes history",
+        "derivation": [
+          "rule:later_explicit_negation"
+        ],
+        "evidence_for": [
+          {
+            "source_doc_id": "SYN-007-diabetes-history",
+            "date": "2026-02-12",
+            "detail": "SYNTHETIC. Historical outside note records a provisional concern for type 2 diabetes; current status was not established.",
+            "recency_days": 206
+          }
+        ],
+        "evidence_against": [
+          {
+            "source_doc_id": "SYN-007-diabetes-review",
+            "date": "2026-07-21",
+            "detail": "SYNTHETIC. Follow-up clinician review: type 2 diabetes ruled out on repeat testing; earlier hyperglycemia was transient during steroid treatment and resolved. Do not carry the historical suggestion forward.",
+            "recency_days": 47
+          }
+        ],
+        "context_evidence": [
+          {
+            "source_doc_id": "SYN-007-diabetes-lab",
+            "date": "2026-02-12",
+            "detail": "SYNTHETIC. Hemoglobin A1c: 7.4 %; LOINC 4548-4. This isolated result cannot establish type 2 diabetes.",
+            "recency_days": 206
+          }
+        ],
+        "knowledge": [
+          {
+            "snippet_id": "KB-INTAKE-DM",
+            "condition_key": "diabetes",
+            "title": "Prototype documentation policy: diabetes",
+            "text": "This demonstration surfaces a recent explicit external clinician assessment for reconciliation. Isolated laboratory results, medications and demographic risk never establish a condition within this software.",
+            "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis",
+            "reviewed_at": "2026-09-06"
+          }
+        ],
+        "status_hint": "contradicted",
+        "support_adequate": false,
+        "retrieval_method": "keyword"
+      },
+      "final_status": "contradicted",
+      "final_finding": {
+        "finding_id": "SYN-007-diabetes",
+        "condition_key": "diabetes",
+        "label": "Review external type 2 diabetes history",
+        "status": "contradicted",
+        "confidence": 0.9,
+        "evidence_for": [
+          {
+            "source_doc_id": "SYN-007-diabetes-history",
+            "date": "2026-02-12",
+            "detail": "SYNTHETIC. Historical outside note records a provisional concern for type 2 diabetes; current status was not established.",
+            "recency_days": 206
+          }
+        ],
+        "evidence_against": [
+          {
+            "source_doc_id": "SYN-007-diabetes-review",
+            "date": "2026-07-21",
+            "detail": "SYNTHETIC. Follow-up clinician review: type 2 diabetes ruled out on repeat testing; earlier hyperglycemia was transient during steroid treatment and resolved. Do not carry the historical suggestion forward.",
+            "recency_days": 47
+          }
+        ],
+        "context_evidence": [
+          {
+            "source_doc_id": "SYN-007-diabetes-lab",
+            "date": "2026-02-12",
+            "detail": "SYNTHETIC. Hemoglobin A1c: 7.4 %; LOINC 4548-4. This isolated result cannot establish type 2 diabetes.",
+            "recency_days": 206
+          }
+        ],
+        "reasoning": "The later clinician review in SYN-007-diabetes-review, SYN-007-diabetes-history argues against carrying this historical impression forward. Surface the record conflict for review without suggesting a new condition.",
+        "recommended_action": "no_action",
+        "automation_level": "recommend_only",
+        "human_review_required": true,
+        "derivation": [
+          "rule:later_explicit_negation"
+        ],
+        "flags": [
+          "uncalibrated_heuristic"
+        ],
+        "knowledge_references": [
+          {
+            "snippet_id": "KB-INTAKE-DM",
+            "condition_key": "diabetes",
+            "title": "Prototype documentation policy: diabetes",
+            "text": "This demonstration surfaces a recent explicit external clinician assessment for reconciliation. Isolated laboratory results, medications and demographic risk never establish a condition within this software.",
+            "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis",
+            "reviewed_at": "2026-09-06"
+          }
+        ]
+      }
+    },
+    {
+      "candidate": {
+        "finding_id": "SYN-007-af",
+        "condition_key": "af",
+        "label": "Review external atrial fibrillation history",
+        "derivation": [
+          "rule:no_adequate_documentation"
+        ],
+        "evidence_for": [],
+        "evidence_against": [],
+        "context_evidence": [],
+        "knowledge": [
+          {
+            "snippet_id": "KB-AF-01",
+            "condition_key": "af",
+            "title": "Atrial-fibrillation assessment relies on rhythm evidence",
+            "text": "NICE recommends a 12-lead ECG to diagnose suspected atrial fibrillation when an irregular pulse is detected. Review the tracing interpretation; anticoagulant use alone does not establish the indication.",
+            "source_url": "https://www.nice.org.uk/guidance/NG196/chapter/recommendations",
+            "reviewed_at": "2026-09-06"
+          }
+        ],
+        "status_hint": "insufficient_evidence",
+        "support_adequate": false,
+        "retrieval_method": "keyword"
+      },
+      "final_status": "insufficient_evidence",
+      "final_finding": {
+        "finding_id": "SYN-007-af",
+        "condition_key": "af",
+        "label": "Review external atrial fibrillation history",
+        "status": "insufficient_evidence",
+        "confidence": 0.88,
+        "evidence_for": [],
+        "evidence_against": [],
+        "context_evidence": [],
+        "reasoning": "The supplied record contains no adequate documentation of this history. Request additional records rather than infer a condition.",
+        "recommended_action": "no_action",
+        "automation_level": "recommend_only",
+        "human_review_required": false,
+        "derivation": [
+          "rule:no_adequate_documentation"
+        ],
+        "flags": [
+          "uncalibrated_heuristic"
+        ],
+        "knowledge_references": [
+          {
+            "snippet_id": "KB-AF-01",
+            "condition_key": "af",
+            "title": "Atrial-fibrillation assessment relies on rhythm evidence",
+            "text": "NICE recommends a 12-lead ECG to diagnose suspected atrial fibrillation when an irregular pulse is detected. Review the tracing interpretation; anticoagulant use alone does not establish the indication.",
+            "source_url": "https://www.nice.org.uk/guidance/NG196/chapter/recommendations",
+            "reviewed_at": "2026-09-06"
+          }
+        ]
+      }
+    },
+    {
+      "candidate": {
+        "finding_id": "SYN-007-depression",
+        "condition_key": "depression",
+        "label": "Review external depression history",
+        "derivation": [
+          "rule:no_adequate_documentation"
+        ],
+        "evidence_for": [],
+        "evidence_against": [],
+        "context_evidence": [],
+        "knowledge": [
+          {
+            "snippet_id": "KB-INTAKE-MOOD",
+            "condition_key": "depression",
+            "title": "Prototype documentation policy: depression",
+            "text": "Review the clinician's assessment and whether it was provisional or superseded. Medication use or a symptom mention alone does not establish a depression history in this demonstration.",
+            "source_url": "https://www.nice.org.uk/guidance/ng222/chapter/recommendations",
+            "reviewed_at": "2026-09-06"
+          }
+        ],
+        "status_hint": "insufficient_evidence",
+        "support_adequate": false,
+        "retrieval_method": "keyword"
+      },
+      "final_status": "insufficient_evidence",
+      "final_finding": {
+        "finding_id": "SYN-007-depression",
+        "condition_key": "depression",
+        "label": "Review external depression history",
+        "status": "insufficient_evidence",
+        "confidence": 0.88,
+        "evidence_for": [],
+        "evidence_against": [],
+        "context_evidence": [],
+        "reasoning": "The supplied record contains no adequate documentation of this history. Request additional records rather than infer a condition.",
+        "recommended_action": "no_action",
+        "automation_level": "recommend_only",
+        "human_review_required": false,
+        "derivation": [
+          "rule:no_adequate_documentation"
+        ],
+        "flags": [
+          "uncalibrated_heuristic"
+        ],
+        "knowledge_references": [
+          {
+            "snippet_id": "KB-INTAKE-MOOD",
+            "condition_key": "depression",
+            "title": "Prototype documentation policy: depression",
+            "text": "Review the clinician's assessment and whether it was provisional or superseded. Medication use or a symptom mention alone does not establish a depression history in this demonstration.",
+            "source_url": "https://www.nice.org.uk/guidance/ng222/chapter/recommendations",
+            "reviewed_at": "2026-09-06"
+          }
+        ]
+      }
+    }
+  ],
+  "authorization": [
+    {
+      "finding_id": "SYN-007-ckd",
+      "permitted_capability": "recommend",
+      "automation_level": "recommend_only",
+      "recommended_action": "no_action",
+      "human_review_required": true
+    },
+    {
+      "finding_id": "SYN-007-chf",
+      "permitted_capability": "recommend",
+      "automation_level": "recommend_only",
+      "recommended_action": "no_action",
+      "human_review_required": true
+    },
+    {
+      "finding_id": "SYN-007-copd",
+      "permitted_capability": "recommend",
+      "automation_level": "recommend_only",
+      "recommended_action": "no_action",
+      "human_review_required": false
+    },
+    {
+      "finding_id": "SYN-007-diabetes",
+      "permitted_capability": "recommend",
+      "automation_level": "recommend_only",
+      "recommended_action": "no_action",
+      "human_review_required": true
+    },
+    {
+      "finding_id": "SYN-007-af",
+      "permitted_capability": "recommend",
+      "automation_level": "recommend_only",
+      "recommended_action": "no_action",
+      "human_review_required": false
+    },
+    {
+      "finding_id": "SYN-007-depression",
+      "permitted_capability": "recommend",
+      "automation_level": "recommend_only",
+      "recommended_action": "no_action",
+      "human_review_required": false
+    }
+  ],
+  "fallbacks": [
+    "offline_mode: deterministic-only output; no model or network required"
+  ],
+  "brief_sha256": "fb10a633ac201ad166ee320e1850b08b3687af5a307383b396778586f67e42d5",
+  "previous_record_sha256": "8ae78f3324c8b1d0dd4485df52f2a22a23a594a4f1a9a18406bfee45c4fc9066",
+  "record_sha256": "f21a5bfc1f515334b8f0b44accb7cdfca75e457180a491ac8a8f23b877cb0f00"
+}

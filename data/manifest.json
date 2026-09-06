@@ -1,0 +1,9 @@
+{
+  "synthetic": true,
+  "as_of": "2026-09-06",
+  "default_member": "SYN-007",
+  "member_count": 12,
+  "schema_version": "0.1.0",
+  "confidence_note": "Uncalibrated heuristic confidence in record status, not disease probability.",
+  "mode": "precomputed offline fixtures; no API key or backend"
+}
