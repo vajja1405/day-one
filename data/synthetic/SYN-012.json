@@ -1,0 +1,134 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "member_id": "SYN-012",
+  "meta": {
+    "label": "SYNTHETIC",
+    "scenario": "already_documented",
+    "generated_for": "Independent Day One demonstration; no real person"
+  },
+  "demographics": {
+    "age_band": "80–84",
+    "sex": "male"
+  },
+  "coded_conditions": [
+    {
+      "condition_key": "copd",
+      "code": "J44.9",
+      "display": "COPD",
+      "date": "2026-08-04",
+      "source_doc_id": "SYN-012-copd-chart"
+    },
+    {
+      "condition_key": "af",
+      "code": "I48.91",
+      "display": "Atrial fibrillation",
+      "date": "2026-08-04",
+      "source_doc_id": "SYN-012-af-chart"
+    },
+    {
+      "condition_key": "depression",
+      "code": "F32.A",
+      "display": "Depression",
+      "date": "2026-08-04",
+      "source_doc_id": "SYN-012-depression-chart"
+    }
+  ],
+  "medications": [
+    {
+      "name": "tiotropium",
+      "status": "active",
+      "date": "2026-08-10",
+      "source_doc_id": "SYN-012-medications"
+    },
+    {
+      "name": "apixaban",
+      "status": "active",
+      "date": "2026-08-10",
+      "source_doc_id": "SYN-012-medications"
+    },
+    {
+      "name": "sertraline",
+      "status": "active",
+      "date": "2026-08-10",
+      "source_doc_id": "SYN-012-medications"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "E-SYN-012-intake",
+      "date": "2026-08-25",
+      "encounter_type": "intake",
+      "source_doc_id": "SYN-012-intake"
+    },
+    {
+      "encounter_id": "E-SYN-012-copd-history",
+      "date": "2026-02-12",
+      "encounter_type": "external specialist review",
+      "source_doc_id": "SYN-012-copd-history"
+    },
+    {
+      "encounter_id": "E-SYN-012-af-history",
+      "date": "2026-02-12",
+      "encounter_type": "external specialist review",
+      "source_doc_id": "SYN-012-af-history"
+    },
+    {
+      "encounter_id": "E-SYN-012-depression-history",
+      "date": "2026-02-12",
+      "encounter_type": "external specialist review",
+      "source_doc_id": "SYN-012-depression-history"
+    }
+  ],
+  "observations": [],
+  "source_documents": [
+    {
+      "doc_id": "SYN-012-intake",
+      "doc_type": "encounter_note",
+      "date": "2026-08-25",
+      "excerpt": "SYNTHETIC. New-member intake. Outside records are partial; allergies, vaccination history, preventive screening history and member priorities still need reconciliation."
+    },
+    {
+      "doc_id": "SYN-012-copd-history",
+      "doc_type": "encounter_note",
+      "date": "2026-02-12",
+      "excerpt": "SYNTHETIC. Pulmonary clinician documents COPD after reviewing symptoms, exposure history and post-bronchodilator spirometry. External history awaits reconciliation at the first visit."
+    },
+    {
+      "doc_id": "SYN-012-copd-chart",
+      "doc_type": "claim",
+      "date": "2026-08-04",
+      "excerpt": "SYNTHETIC. Current chart already lists copd (J44.9); retain the documented history for clinician review, without a duplicate suggestion."
+    },
+    {
+      "doc_id": "SYN-012-af-history",
+      "doc_type": "encounter_note",
+      "date": "2026-02-12",
+      "excerpt": "SYNTHETIC. Cardiology clinician documents atrial fibrillation after 12-lead ECG review. External history awaits reconciliation at the first visit."
+    },
+    {
+      "doc_id": "SYN-012-af-chart",
+      "doc_type": "claim",
+      "date": "2026-08-04",
+      "excerpt": "SYNTHETIC. Current chart already lists atrial fibrillation (I48.91); retain the documented history for clinician review, without a duplicate suggestion."
+    },
+    {
+      "doc_id": "SYN-012-depression-history",
+      "doc_type": "encounter_note",
+      "date": "2026-02-12",
+      "excerpt": "SYNTHETIC. Behavioral-health clinician documents depression after clinical interview and longitudinal assessment. External history awaits reconciliation at the first visit."
+    },
+    {
+      "doc_id": "SYN-012-depression-chart",
+      "doc_type": "claim",
+      "date": "2026-08-04",
+      "excerpt": "SYNTHETIC. Current chart already lists depression (F32.A); retain the documented history for clinician review, without a duplicate suggestion."
+    },
+    {
+      "doc_id": "SYN-012-medications",
+      "doc_type": "med_list",
+      "date": "2026-08-10",
+      "excerpt": "SYNTHETIC. External medication list, active as recorded: tiotropium, apixaban, sertraline. Indications, doses and current use need clinician reconciliation; a medication alone does not establish a condition."
+    }
+  ]
+}

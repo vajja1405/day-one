@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.env
+.env.*
+!.env.example
+.DS_Store
+node_modules/
+dist/
+offline-dist/
+.next/
+.vinext/
+.wrangler/
+.openai/
+*.tsbuildinfo
+*.zip

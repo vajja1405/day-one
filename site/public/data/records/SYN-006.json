@@ -1,0 +1,37 @@
+{
+  "member_id": "SYN-006",
+  "demographics": {
+    "age_band": "70–74",
+    "sex": "male"
+  },
+  "scenario": "sparse",
+  "synthetic": true,
+  "as_of": "2026-09-06",
+  "coded_conditions": [],
+  "medications": [],
+  "encounters": [
+    {
+      "encounter_id": "E-SYN-006-intake",
+      "date": "2026-08-25",
+      "encounter_type": "intake",
+      "source_doc_id": "SYN-006-intake"
+    }
+  ],
+  "observations": [],
+  "record_completeness": 0.4,
+  "completeness_components": {
+    "encounters": 0.25,
+    "labs": 0.0,
+    "med_list": 0.0,
+    "longitudinal": 0.0,
+    "recency": 0.15
+  },
+  "source_documents": [
+    {
+      "doc_id": "SYN-006-intake",
+      "doc_type": "encounter_note",
+      "date": "2026-08-25",
+      "excerpt": "SYNTHETIC. New-member intake. Outside records are partial; allergies, vaccination history, preventive screening history and member priorities still need reconciliation. Member reports fatigue and occasional ankle swelling; no specialist assessment or confirmatory tests are available."
+    }
+  ]
+}

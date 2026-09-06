@@ -1,0 +1,593 @@
+{
+  "audit_id": "audit-0c98f656-1f95-4eac-aac0-cf5c106f7200",
+  "timestamp": "2026-09-06T21:54:43.908150Z",
+  "as_of": "2026-09-06",
+  "member_id": "SYN-012",
+  "synthetic": true,
+  "source_documents": [
+    {
+      "doc_id": "SYN-012-af-history",
+      "date": "2026-02-12",
+      "doc_type": "encounter_note",
+      "sha256": "117575548e68aa3574824abafbc439970602cf0e967d3cc856fa8813085ad0b1",
+      "excerpt": "SYNTHETIC. Cardiology clinician documents atrial fibrillation after 12-lead ECG review. External history awaits reconciliation at the first visit."
+    },
+    {
+      "doc_id": "SYN-012-copd-history",
+      "date": "2026-02-12",
+      "doc_type": "encounter_note",
+      "sha256": "2d73a9921d438b28b5ccf376588b59b9e71dcaa4bf284a11c4c27c54f1a9a42d",
+      "excerpt": "SYNTHETIC. Pulmonary clinician documents COPD after reviewing symptoms, exposure history and post-bronchodilator spirometry. External history awaits reconciliation at the first visit."
+    },
+    {
+      "doc_id": "SYN-012-depression-history",
+      "date": "2026-02-12",
+      "doc_type": "encounter_note",
+      "sha256": "3e66e05924b33995e81f433a05d0c0f634e0ab2d851594df72054792f115cedb",
+      "excerpt": "SYNTHETIC. Behavioral-health clinician documents depression after clinical interview and longitudinal assessment. External history awaits reconciliation at the first visit."
+    },
+    {
+      "doc_id": "SYN-012-af-chart",
+      "date": "2026-08-04",
+      "doc_type": "claim",
+      "sha256": "afafcf2d34d0827fb0ca4c81231662a496759f1c704b3d9702775358e0c48e81",
+      "excerpt": "SYNTHETIC. Current chart already lists atrial fibrillation (I48.91); retain the documented history for clinician review, without a duplicate suggestion."
+    },
+    {
+      "doc_id": "SYN-012-copd-chart",
+      "date": "2026-08-04",
+      "doc_type": "claim",
+      "sha256": "007cecb8b93e8dc5852d810cceb30c7ccbf1242145478267af5931d2d6632c94",
+      "excerpt": "SYNTHETIC. Current chart already lists copd (J44.9); retain the documented history for clinician review, without a duplicate suggestion."
+    },
+    {
+      "doc_id": "SYN-012-depression-chart",
+      "date": "2026-08-04",
+      "doc_type": "claim",
+      "sha256": "0c92f2c30668400211b25c716bec8f66af60f9d0f95ab2b0689b2e2c4e72177d",
+      "excerpt": "SYNTHETIC. Current chart already lists depression (F32.A); retain the documented history for clinician review, without a duplicate suggestion."
+    },
+    {
+      "doc_id": "SYN-012-medications",
+      "date": "2026-08-10",
+      "doc_type": "med_list",
+      "sha256": "eb6e3ef264712c729b442827517c5ac80f30fc7de1cf05323d69b7e783adb00c",
+      "excerpt": "SYNTHETIC. External medication list, active as recorded: tiotropium, apixaban, sertraline. Indications, doses and current use need clinician reconciliation; a medication alone does not establish a condition."
+    },
+    {
+      "doc_id": "SYN-012-intake",
+      "date": "2026-08-25",
+      "doc_type": "encounter_note",
+      "sha256": "481b46607f611bf1c112cb73097e08b141c706d8dd9de8ca4e1c70c4ffb01f26",
+      "excerpt": "SYNTHETIC. New-member intake. Outside records are partial; allergies, vaccination history, preventive screening history and member priorities still need reconciliation."
+    }
+  ],
+  "knowledge_base_version": "dayone-context-2026-09-06-v1",
+  "knowledge_base_sha256": "fec1b2783fa5685ea8c18ab65678be06e78396e4c5bba30345f11bd18c6cea50",
+  "deterministic_rules_fired": [
+    "rule:already_coded",
+    "rule:medication_list_reconciliation",
+    "rule:no_adequate_documentation"
+  ],
+  "llm": {
+    "called": false,
+    "model": null,
+    "prompt_hash": null,
+    "validation_retries": 0,
+    "usage": {}
+  },
+  "candidate_outcomes": [
+    {
+      "candidate": {
+        "finding_id": "SYN-012-ckd",
+        "condition_key": "ckd",
+        "label": "Review external chronic kidney disease history",
+        "derivation": [
+          "rule:no_adequate_documentation"
+        ],
+        "evidence_for": [],
+        "evidence_against": [],
+        "context_evidence": [],
+        "knowledge": [
+          {
+            "snippet_id": "KB-CKD-01",
+            "condition_key": "ckd",
+            "title": "Kidney history requires longitudinal context",
+            "text": "Chronic kidney disease assessment concerns abnormalities persisting for at least three months. One low eGFR during an acute illness cannot establish chronicity; retrieve longitudinal measurements and the clinician assessment.",
+            "source_url": "https://www.kidney.org/kidney-failure-risk-factor-estimated-glomerular-filtration-rate-egfr",
+            "reviewed_at": "2026-09-06"
+          }
+        ],
+        "status_hint": "insufficient_evidence",
+        "support_adequate": false,
+        "retrieval_method": "keyword"
+      },
+      "final_status": "insufficient_evidence",
+      "final_finding": {
+        "finding_id": "SYN-012-ckd",
+        "condition_key": "ckd",
+        "label": "Review external chronic kidney disease history",
+        "status": "insufficient_evidence",
+        "confidence": 0.88,
+        "evidence_for": [],
+        "evidence_against": [],
+        "context_evidence": [],
+        "reasoning": "The supplied record contains no adequate documentation of this history. Request additional records rather than infer a condition.",
+        "recommended_action": "no_action",
+        "automation_level": "recommend_only",
+        "human_review_required": false,
+        "derivation": [
+          "rule:no_adequate_documentation"
+        ],
+        "flags": [
+          "uncalibrated_heuristic"
+        ],
+        "knowledge_references": [
+          {
+            "snippet_id": "KB-CKD-01",
+            "condition_key": "ckd",
+            "title": "Kidney history requires longitudinal context",
+            "text": "Chronic kidney disease assessment concerns abnormalities persisting for at least three months. One low eGFR during an acute illness cannot establish chronicity; retrieve longitudinal measurements and the clinician assessment.",
+            "source_url": "https://www.kidney.org/kidney-failure-risk-factor-estimated-glomerular-filtration-rate-egfr",
+            "reviewed_at": "2026-09-06"
+          }
+        ]
+      }
+    },
+    {
+      "candidate": {
+        "finding_id": "SYN-012-chf",
+        "condition_key": "chf",
+        "label": "Review external heart failure history",
+        "derivation": [
+          "rule:no_adequate_documentation"
+        ],
+        "evidence_for": [],
+        "evidence_against": [],
+        "context_evidence": [],
+        "knowledge": [
+          {
+            "snippet_id": "KB-INTAKE-HF",
+            "condition_key": "chf",
+            "title": "Prototype documentation policy: heart failure",
+            "text": "Review the external clinician assessment and supporting cardiac workup. A historical BNP result or diuretic prescription alone is not adequate patient-specific support in this demonstration.",
+            "source_url": "https://www.nice.org.uk/guidance/ng106/chapter/recommendations",
+            "reviewed_at": "2026-09-06"
+          }
+        ],
+        "status_hint": "insufficient_evidence",
+        "support_adequate": false,
+        "retrieval_method": "keyword"
+      },
+      "final_status": "insufficient_evidence",
+      "final_finding": {
+        "finding_id": "SYN-012-chf",
+        "condition_key": "chf",
+        "label": "Review external heart failure history",
+        "status": "insufficient_evidence",
+        "confidence": 0.88,
+        "evidence_for": [],
+        "evidence_against": [],
+        "context_evidence": [],
+        "reasoning": "The supplied record contains no adequate documentation of this history. Request additional records rather than infer a condition.",
+        "recommended_action": "no_action",
+        "automation_level": "recommend_only",
+        "human_review_required": false,
+        "derivation": [
+          "rule:no_adequate_documentation"
+        ],
+        "flags": [
+          "uncalibrated_heuristic"
+        ],
+        "knowledge_references": [
+          {
+            "snippet_id": "KB-INTAKE-HF",
+            "condition_key": "chf",
+            "title": "Prototype documentation policy: heart failure",
+            "text": "Review the external clinician assessment and supporting cardiac workup. A historical BNP result or diuretic prescription alone is not adequate patient-specific support in this demonstration.",
+            "source_url": "https://www.nice.org.uk/guidance/ng106/chapter/recommendations",
+            "reviewed_at": "2026-09-06"
+          }
+        ]
+      }
+    },
+    {
+      "candidate": {
+        "finding_id": "SYN-012-copd",
+        "condition_key": "copd",
+        "label": "Review external copd history",
+        "derivation": [
+          "rule:already_coded"
+        ],
+        "evidence_for": [
+          {
+            "source_doc_id": "SYN-012-copd-history",
+            "date": "2026-02-12",
+            "detail": "SYNTHETIC. Pulmonary clinician documents COPD after reviewing symptoms, exposure history and post-bronchodilator spirometry. External history awaits reconciliation at the first visit.",
+            "recency_days": 206
+          },
+          {
+            "source_doc_id": "SYN-012-copd-chart",
+            "date": "2026-08-04",
+            "detail": "SYNTHETIC. Current chart already lists copd (J44.9); retain the documented history for clinician review, without a duplicate suggestion.",
+            "recency_days": 33
+          }
+        ],
+        "evidence_against": [],
+        "context_evidence": [
+          {
+            "source_doc_id": "SYN-012-copd-chart",
+            "date": "2026-08-04",
+            "detail": "SYNTHETIC. Current chart already lists copd (J44.9); retain the documented history for clinician review, without a duplicate suggestion.",
+            "recency_days": 33
+          }
+        ],
+        "knowledge": [
+          {
+            "snippet_id": "KB-COPD-01",
+            "condition_key": "copd",
+            "title": "COPD history needs clinical and spirometry context",
+            "text": "COPD diagnosis requires appropriate clinical context and spirometry assessment. An inhaler or a respiratory symptom alone is insufficient to establish the diagnosis.",
+            "source_url": "https://goldcopd.org/gold-spirometry-guide/",
+            "reviewed_at": "2026-09-06"
+          }
+        ],
+        "status_hint": "already_documented",
+        "support_adequate": true,
+        "retrieval_method": "keyword"
+      },
+      "final_status": "already_documented",
+      "final_finding": {
+        "finding_id": "SYN-012-copd",
+        "condition_key": "copd",
+        "label": "Review external copd history",
+        "status": "already_documented",
+        "confidence": 0.96,
+        "evidence_for": [
+          {
+            "source_doc_id": "SYN-012-copd-history",
+            "date": "2026-02-12",
+            "detail": "SYNTHETIC. Pulmonary clinician documents COPD after reviewing symptoms, exposure history and post-bronchodilator spirometry. External history awaits reconciliation at the first visit.",
+            "recency_days": 206
+          },
+          {
+            "source_doc_id": "SYN-012-copd-chart",
+            "date": "2026-08-04",
+            "detail": "SYNTHETIC. Current chart already lists copd (J44.9); retain the documented history for clinician review, without a duplicate suggestion.",
+            "recency_days": 33
+          }
+        ],
+        "evidence_against": [],
+        "context_evidence": [
+          {
+            "source_doc_id": "SYN-012-copd-chart",
+            "date": "2026-08-04",
+            "detail": "SYNTHETIC. Current chart already lists copd (J44.9); retain the documented history for clinician review, without a duplicate suggestion.",
+            "recency_days": 33
+          }
+        ],
+        "reasoning": "The current chart already contains this history in SYN-012-copd-history, SYN-012-copd-chart, SYN-012-copd-chart. Review the existing entry without duplicating it.",
+        "recommended_action": "already_on_chart",
+        "automation_level": "recommend_only",
+        "human_review_required": false,
+        "derivation": [
+          "rule:already_coded"
+        ],
+        "flags": [
+          "uncalibrated_heuristic"
+        ],
+        "knowledge_references": [
+          {
+            "snippet_id": "KB-COPD-01",
+            "condition_key": "copd",
+            "title": "COPD history needs clinical and spirometry context",
+            "text": "COPD diagnosis requires appropriate clinical context and spirometry assessment. An inhaler or a respiratory symptom alone is insufficient to establish the diagnosis.",
+            "source_url": "https://goldcopd.org/gold-spirometry-guide/",
+            "reviewed_at": "2026-09-06"
+          }
+        ]
+      }
+    },
+    {
+      "candidate": {
+        "finding_id": "SYN-012-diabetes",
+        "condition_key": "diabetes",
+        "label": "Review external type 2 diabetes history",
+        "derivation": [
+          "rule:no_adequate_documentation"
+        ],
+        "evidence_for": [],
+        "evidence_against": [],
+        "context_evidence": [],
+        "knowledge": [
+          {
+            "snippet_id": "KB-INTAKE-DM",
+            "condition_key": "diabetes",
+            "title": "Prototype documentation policy: diabetes",
+            "text": "This demonstration surfaces a recent explicit external clinician assessment for reconciliation. Isolated laboratory results, medications and demographic risk never establish a condition within this software.",
+            "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis",
+            "reviewed_at": "2026-09-06"
+          }
+        ],
+        "status_hint": "insufficient_evidence",
+        "support_adequate": false,
+        "retrieval_method": "keyword"
+      },
+      "final_status": "insufficient_evidence",
+      "final_finding": {
+        "finding_id": "SYN-012-diabetes",
+        "condition_key": "diabetes",
+        "label": "Review external type 2 diabetes history",
+        "status": "insufficient_evidence",
+        "confidence": 0.88,
+        "evidence_for": [],
+        "evidence_against": [],
+        "context_evidence": [],
+        "reasoning": "The supplied record contains no adequate documentation of this history. Request additional records rather than infer a condition.",
+        "recommended_action": "no_action",
+        "automation_level": "recommend_only",
+        "human_review_required": false,
+        "derivation": [
+          "rule:no_adequate_documentation"
+        ],
+        "flags": [
+          "uncalibrated_heuristic"
+        ],
+        "knowledge_references": [
+          {
+            "snippet_id": "KB-INTAKE-DM",
+            "condition_key": "diabetes",
+            "title": "Prototype documentation policy: diabetes",
+            "text": "This demonstration surfaces a recent explicit external clinician assessment for reconciliation. Isolated laboratory results, medications and demographic risk never establish a condition within this software.",
+            "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis",
+            "reviewed_at": "2026-09-06"
+          }
+        ]
+      }
+    },
+    {
+      "candidate": {
+        "finding_id": "SYN-012-af",
+        "condition_key": "af",
+        "label": "Review external atrial fibrillation history",
+        "derivation": [
+          "rule:already_coded"
+        ],
+        "evidence_for": [
+          {
+            "source_doc_id": "SYN-012-af-history",
+            "date": "2026-02-12",
+            "detail": "SYNTHETIC. Cardiology clinician documents atrial fibrillation after 12-lead ECG review. External history awaits reconciliation at the first visit.",
+            "recency_days": 206
+          },
+          {
+            "source_doc_id": "SYN-012-af-chart",
+            "date": "2026-08-04",
+            "detail": "SYNTHETIC. Current chart already lists atrial fibrillation (I48.91); retain the documented history for clinician review, without a duplicate suggestion.",
+            "recency_days": 33
+          }
+        ],
+        "evidence_against": [],
+        "context_evidence": [
+          {
+            "source_doc_id": "SYN-012-af-chart",
+            "date": "2026-08-04",
+            "detail": "SYNTHETIC. Current chart already lists atrial fibrillation (I48.91); retain the documented history for clinician review, without a duplicate suggestion.",
+            "recency_days": 33
+          }
+        ],
+        "knowledge": [
+          {
+            "snippet_id": "KB-AF-01",
+            "condition_key": "af",
+            "title": "Atrial-fibrillation assessment relies on rhythm evidence",
+            "text": "NICE recommends a 12-lead ECG to diagnose suspected atrial fibrillation when an irregular pulse is detected. Review the tracing interpretation; anticoagulant use alone does not establish the indication.",
+            "source_url": "https://www.nice.org.uk/guidance/NG196/chapter/recommendations",
+            "reviewed_at": "2026-09-06"
+          }
+        ],
+        "status_hint": "already_documented",
+        "support_adequate": true,
+        "retrieval_method": "keyword"
+      },
+      "final_status": "already_documented",
+      "final_finding": {
+        "finding_id": "SYN-012-af",
+        "condition_key": "af",
+        "label": "Review external atrial fibrillation history",
+        "status": "already_documented",
+        "confidence": 0.96,
+        "evidence_for": [
+          {
+            "source_doc_id": "SYN-012-af-history",
+            "date": "2026-02-12",
+            "detail": "SYNTHETIC. Cardiology clinician documents atrial fibrillation after 12-lead ECG review. External history awaits reconciliation at the first visit.",
+            "recency_days": 206
+          },
+          {
+            "source_doc_id": "SYN-012-af-chart",
+            "date": "2026-08-04",
+            "detail": "SYNTHETIC. Current chart already lists atrial fibrillation (I48.91); retain the documented history for clinician review, without a duplicate suggestion.",
+            "recency_days": 33
+          }
+        ],
+        "evidence_against": [],
+        "context_evidence": [
+          {
+            "source_doc_id": "SYN-012-af-chart",
+            "date": "2026-08-04",
+            "detail": "SYNTHETIC. Current chart already lists atrial fibrillation (I48.91); retain the documented history for clinician review, without a duplicate suggestion.",
+            "recency_days": 33
+          }
+        ],
+        "reasoning": "The current chart already contains this history in SYN-012-af-history, SYN-012-af-chart, SYN-012-af-chart. Review the existing entry without duplicating it.",
+        "recommended_action": "already_on_chart",
+        "automation_level": "recommend_only",
+        "human_review_required": false,
+        "derivation": [
+          "rule:already_coded"
+        ],
+        "flags": [
+          "uncalibrated_heuristic"
+        ],
+        "knowledge_references": [
+          {
+            "snippet_id": "KB-AF-01",
+            "condition_key": "af",
+            "title": "Atrial-fibrillation assessment relies on rhythm evidence",
+            "text": "NICE recommends a 12-lead ECG to diagnose suspected atrial fibrillation when an irregular pulse is detected. Review the tracing interpretation; anticoagulant use alone does not establish the indication.",
+            "source_url": "https://www.nice.org.uk/guidance/NG196/chapter/recommendations",
+            "reviewed_at": "2026-09-06"
+          }
+        ]
+      }
+    },
+    {
+      "candidate": {
+        "finding_id": "SYN-012-depression",
+        "condition_key": "depression",
+        "label": "Review external depression history",
+        "derivation": [
+          "rule:already_coded"
+        ],
+        "evidence_for": [
+          {
+            "source_doc_id": "SYN-012-depression-history",
+            "date": "2026-02-12",
+            "detail": "SYNTHETIC. Behavioral-health clinician documents depression after clinical interview and longitudinal assessment. External history awaits reconciliation at the first visit.",
+            "recency_days": 206
+          },
+          {
+            "source_doc_id": "SYN-012-depression-chart",
+            "date": "2026-08-04",
+            "detail": "SYNTHETIC. Current chart already lists depression (F32.A); retain the documented history for clinician review, without a duplicate suggestion.",
+            "recency_days": 33
+          }
+        ],
+        "evidence_against": [],
+        "context_evidence": [
+          {
+            "source_doc_id": "SYN-012-depression-chart",
+            "date": "2026-08-04",
+            "detail": "SYNTHETIC. Current chart already lists depression (F32.A); retain the documented history for clinician review, without a duplicate suggestion.",
+            "recency_days": 33
+          }
+        ],
+        "knowledge": [
+          {
+            "snippet_id": "KB-INTAKE-MOOD",
+            "condition_key": "depression",
+            "title": "Prototype documentation policy: depression",
+            "text": "Review the clinician's assessment and whether it was provisional or superseded. Medication use or a symptom mention alone does not establish a depression history in this demonstration.",
+            "source_url": "https://www.nice.org.uk/guidance/ng222/chapter/recommendations",
+            "reviewed_at": "2026-09-06"
+          }
+        ],
+        "status_hint": "already_documented",
+        "support_adequate": true,
+        "retrieval_method": "keyword"
+      },
+      "final_status": "already_documented",
+      "final_finding": {
+        "finding_id": "SYN-012-depression",
+        "condition_key": "depression",
+        "label": "Review external depression history",
+        "status": "already_documented",
+        "confidence": 0.96,
+        "evidence_for": [
+          {
+            "source_doc_id": "SYN-012-depression-history",
+            "date": "2026-02-12",
+            "detail": "SYNTHETIC. Behavioral-health clinician documents depression after clinical interview and longitudinal assessment. External history awaits reconciliation at the first visit.",
+            "recency_days": 206
+          },
+          {
+            "source_doc_id": "SYN-012-depression-chart",
+            "date": "2026-08-04",
+            "detail": "SYNTHETIC. Current chart already lists depression (F32.A); retain the documented history for clinician review, without a duplicate suggestion.",
+            "recency_days": 33
+          }
+        ],
+        "evidence_against": [],
+        "context_evidence": [
+          {
+            "source_doc_id": "SYN-012-depression-chart",
+            "date": "2026-08-04",
+            "detail": "SYNTHETIC. Current chart already lists depression (F32.A); retain the documented history for clinician review, without a duplicate suggestion.",
+            "recency_days": 33
+          }
+        ],
+        "reasoning": "The current chart already contains this history in SYN-012-depression-history, SYN-012-depression-chart, SYN-012-depression-chart. Review the existing entry without duplicating it.",
+        "recommended_action": "already_on_chart",
+        "automation_level": "recommend_only",
+        "human_review_required": false,
+        "derivation": [
+          "rule:already_coded"
+        ],
+        "flags": [
+          "uncalibrated_heuristic"
+        ],
+        "knowledge_references": [
+          {
+            "snippet_id": "KB-INTAKE-MOOD",
+            "condition_key": "depression",
+            "title": "Prototype documentation policy: depression",
+            "text": "Review the clinician's assessment and whether it was provisional or superseded. Medication use or a symptom mention alone does not establish a depression history in this demonstration.",
+            "source_url": "https://www.nice.org.uk/guidance/ng222/chapter/recommendations",
+            "reviewed_at": "2026-09-06"
+          }
+        ]
+      }
+    }
+  ],
+  "authorization": [
+    {
+      "finding_id": "SYN-012-ckd",
+      "permitted_capability": "recommend",
+      "automation_level": "recommend_only",
+      "recommended_action": "no_action",
+      "human_review_required": false
+    },
+    {
+      "finding_id": "SYN-012-chf",
+      "permitted_capability": "recommend",
+      "automation_level": "recommend_only",
+      "recommended_action": "no_action",
+      "human_review_required": false
+    },
+    {
+      "finding_id": "SYN-012-copd",
+      "permitted_capability": "recommend",
+      "automation_level": "recommend_only",
+      "recommended_action": "already_on_chart",
+      "human_review_required": false
+    },
+    {
+      "finding_id": "SYN-012-diabetes",
+      "permitted_capability": "recommend",
+      "automation_level": "recommend_only",
+      "recommended_action": "no_action",
+      "human_review_required": false
+    },
+    {
+      "finding_id": "SYN-012-af",
+      "permitted_capability": "recommend",
+      "automation_level": "recommend_only",
+      "recommended_action": "already_on_chart",
+      "human_review_required": false
+    },
+    {
+      "finding_id": "SYN-012-depression",
+      "permitted_capability": "recommend",
+      "automation_level": "recommend_only",
+      "recommended_action": "already_on_chart",
+      "human_review_required": false
+    }
+  ],
+  "fallbacks": [
+    "offline_mode: deterministic-only output; no model or network required"
+  ],
+  "brief_sha256": "8794e57cd0c53cd314911285c4bb02bdb93260c01f5b9f37572e16f4d888f4f8",
+  "previous_record_sha256": "4e89f9d8611622e47339e28fe42d100b16fbc84e9f93294b8a76528a863698fe",
+  "record_sha256": "1179b90d66c3d9b8fa97f5ba780bd0a050416a7a4b84652fb55303d9e23a94d3"
+}

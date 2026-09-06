@@ -1,0 +1,554 @@
+{
+  "summary": {
+    "cases": 30,
+    "members": 12,
+    "correct_cases": 30,
+    "abstention_rate": 1.0,
+    "abstention_numerator": 12,
+    "abstention_denominator": 12,
+    "contradiction_detection_rate": 1.0,
+    "contradiction_numerator": 6,
+    "contradiction_denominator": 6,
+    "stale_suppression_rate": 1.0,
+    "unsafe_suggestion_rate": 0.0,
+    "unsafe_suggestions": 0,
+    "findings_checked": 72,
+    "expected_calibration_error": 0.12933333333333333,
+    "citation_accuracy": 1.0,
+    "citations_checked": 60,
+    "citations_correct": 60,
+    "mean_latency_ms": 9.89625,
+    "median_latency_ms": 9.6725,
+    "mean_estimated_cost_usd": 0.0
+  },
+  "per_status": [
+    {
+      "status": "suggest_confirm",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 8
+    },
+    {
+      "status": "insufficient_evidence",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 12
+    },
+    {
+      "status": "contradicted",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 10
+    },
+    {
+      "status": "already_documented",
+      "precision": null,
+      "recall": null,
+      "f1": null,
+      "support": 0
+    }
+  ],
+  "calibration_bins": [
+    {
+      "lower": 0.0,
+      "upper": 0.1,
+      "count": 0,
+      "mean_confidence": null,
+      "observed_accuracy": null
+    },
+    {
+      "lower": 0.1,
+      "upper": 0.2,
+      "count": 0,
+      "mean_confidence": null,
+      "observed_accuracy": null
+    },
+    {
+      "lower": 0.2,
+      "upper": 0.3,
+      "count": 0,
+      "mean_confidence": null,
+      "observed_accuracy": null
+    },
+    {
+      "lower": 0.3,
+      "upper": 0.4,
+      "count": 0,
+      "mean_confidence": null,
+      "observed_accuracy": null
+    },
+    {
+      "lower": 0.4,
+      "upper": 0.5,
+      "count": 0,
+      "mean_confidence": null,
+      "observed_accuracy": null
+    },
+    {
+      "lower": 0.5,
+      "upper": 0.6,
+      "count": 0,
+      "mean_confidence": null,
+      "observed_accuracy": null
+    },
+    {
+      "lower": 0.6,
+      "upper": 0.7,
+      "count": 0,
+      "mean_confidence": null,
+      "observed_accuracy": null
+    },
+    {
+      "lower": 0.7,
+      "upper": 0.8,
+      "count": 0,
+      "mean_confidence": null,
+      "observed_accuracy": null
+    },
+    {
+      "lower": 0.8,
+      "upper": 0.9,
+      "count": 20,
+      "mean_confidence": 0.856,
+      "observed_accuracy": 1
+    },
+    {
+      "lower": 0.9,
+      "upper": 1.0,
+      "count": 10,
+      "mean_confidence": 0.9,
+      "observed_accuracy": 1
+    }
+  ],
+  "category_counts": {
+    "SUPPORTED": 8,
+    "ABSENT": 8,
+    "CONTRADICTED": 6,
+    "ADVERSARIAL": 4,
+    "STALE": 4
+  },
+  "case_results": [
+    {
+      "case_id": "G01",
+      "member_id": "SYN-001",
+      "condition_key": "ckd",
+      "category": "SUPPORTED",
+      "expected_status": "suggest_confirm",
+      "rationale": "Recent nephrology documentation plus longitudinal measurements supports reviewing the external history.",
+      "predicted_status": "suggest_confirm",
+      "confidence": 0.82,
+      "correct": true
+    },
+    {
+      "case_id": "G02",
+      "member_id": "SYN-001",
+      "condition_key": "diabetes",
+      "category": "SUPPORTED",
+      "expected_status": "suggest_confirm",
+      "rationale": "Recent explicit endocrinology documentation supports reconciliation.",
+      "predicted_status": "suggest_confirm",
+      "confidence": 0.82,
+      "correct": true
+    },
+    {
+      "case_id": "G03",
+      "member_id": "SYN-001",
+      "condition_key": "chf",
+      "category": "SUPPORTED",
+      "expected_status": "suggest_confirm",
+      "rationale": "Recent cardiology assessment with echocardiogram review supports reconciliation.",
+      "predicted_status": "suggest_confirm",
+      "confidence": 0.82,
+      "correct": true
+    },
+    {
+      "case_id": "G04",
+      "member_id": "SYN-002",
+      "condition_key": "copd",
+      "category": "SUPPORTED",
+      "expected_status": "suggest_confirm",
+      "rationale": "Recent pulmonary assessment includes clinical context and spirometry.",
+      "predicted_status": "suggest_confirm",
+      "confidence": 0.82,
+      "correct": true
+    },
+    {
+      "case_id": "G05",
+      "member_id": "SYN-002",
+      "condition_key": "af",
+      "category": "SUPPORTED",
+      "expected_status": "suggest_confirm",
+      "rationale": "Recent cardiology documentation cites ECG review.",
+      "predicted_status": "suggest_confirm",
+      "confidence": 0.82,
+      "correct": true
+    },
+    {
+      "case_id": "G06",
+      "member_id": "SYN-002",
+      "condition_key": "depression",
+      "category": "SUPPORTED",
+      "expected_status": "suggest_confirm",
+      "rationale": "Recent behavioral-health clinician assessment supports reconciliation.",
+      "predicted_status": "suggest_confirm",
+      "confidence": 0.82,
+      "correct": true
+    },
+    {
+      "case_id": "G07",
+      "member_id": "SYN-003",
+      "condition_key": "ckd",
+      "category": "SUPPORTED",
+      "expected_status": "suggest_confirm",
+      "rationale": "Recent specialist documentation refers to measurements five months apart.",
+      "predicted_status": "suggest_confirm",
+      "confidence": 0.82,
+      "correct": true
+    },
+    {
+      "case_id": "G08",
+      "member_id": "SYN-003",
+      "condition_key": "diabetes",
+      "category": "SUPPORTED",
+      "expected_status": "suggest_confirm",
+      "rationale": "Recent explicit clinician documentation is present.",
+      "predicted_status": "suggest_confirm",
+      "confidence": 0.82,
+      "correct": true
+    },
+    {
+      "case_id": "G09",
+      "member_id": "SYN-004",
+      "condition_key": "ckd",
+      "category": "ABSENT",
+      "expected_status": "insufficient_evidence",
+      "rationale": "No kidney evidence in the one-encounter record.",
+      "predicted_status": "insufficient_evidence",
+      "confidence": 0.88,
+      "correct": true
+    },
+    {
+      "case_id": "G10",
+      "member_id": "SYN-004",
+      "condition_key": "chf",
+      "category": "ABSENT",
+      "expected_status": "insufficient_evidence",
+      "rationale": "No cardiac assessment in the supplied record.",
+      "predicted_status": "insufficient_evidence",
+      "confidence": 0.88,
+      "correct": true
+    },
+    {
+      "case_id": "G11",
+      "member_id": "SYN-005",
+      "condition_key": "af",
+      "category": "ABSENT",
+      "expected_status": "insufficient_evidence",
+      "rationale": "No rhythm evidence or clinician history.",
+      "predicted_status": "insufficient_evidence",
+      "confidence": 0.88,
+      "correct": true
+    },
+    {
+      "case_id": "G12",
+      "member_id": "SYN-005",
+      "condition_key": "depression",
+      "category": "ABSENT",
+      "expected_status": "insufficient_evidence",
+      "rationale": "No behavioral-health assessment.",
+      "predicted_status": "insufficient_evidence",
+      "confidence": 0.88,
+      "correct": true
+    },
+    {
+      "case_id": "G13",
+      "member_id": "SYN-006",
+      "condition_key": "ckd",
+      "category": "ABSENT",
+      "expected_status": "insufficient_evidence",
+      "rationale": "No kidney history or longitudinal measurements.",
+      "predicted_status": "insufficient_evidence",
+      "confidence": 0.88,
+      "correct": true
+    },
+    {
+      "case_id": "G14",
+      "member_id": "SYN-006",
+      "condition_key": "chf",
+      "category": "ABSENT",
+      "expected_status": "insufficient_evidence",
+      "rationale": "Ankle swelling is nonspecific and no cardiac assessment is provided.",
+      "predicted_status": "insufficient_evidence",
+      "confidence": 0.88,
+      "correct": true
+    },
+    {
+      "case_id": "G15",
+      "member_id": "SYN-011",
+      "condition_key": "copd",
+      "category": "ABSENT",
+      "expected_status": "insufficient_evidence",
+      "rationale": "Other documented conditions do not establish COPD.",
+      "predicted_status": "insufficient_evidence",
+      "confidence": 0.88,
+      "correct": true
+    },
+    {
+      "case_id": "G16",
+      "member_id": "SYN-012",
+      "condition_key": "diabetes",
+      "category": "ABSENT",
+      "expected_status": "insufficient_evidence",
+      "rationale": "Other documented conditions do not establish diabetes.",
+      "predicted_status": "insufficient_evidence",
+      "confidence": 0.88,
+      "correct": true
+    },
+    {
+      "case_id": "G17",
+      "member_id": "SYN-007",
+      "condition_key": "ckd",
+      "category": "CONTRADICTED",
+      "expected_status": "contradicted",
+      "rationale": "Later clinician note attributes transient eGFR reduction to dehydration and rules out CKD.",
+      "predicted_status": "contradicted",
+      "confidence": 0.9,
+      "correct": true
+    },
+    {
+      "case_id": "G18",
+      "member_id": "SYN-007",
+      "condition_key": "diabetes",
+      "category": "CONTRADICTED",
+      "expected_status": "contradicted",
+      "rationale": "Later clinician note resolves steroid-related hyperglycemia and rules out diabetes.",
+      "predicted_status": "contradicted",
+      "confidence": 0.9,
+      "correct": true
+    },
+    {
+      "case_id": "G19",
+      "member_id": "SYN-007",
+      "condition_key": "chf",
+      "category": "CONTRADICTED",
+      "expected_status": "contradicted",
+      "rationale": "Later cardiology review rules out heart failure.",
+      "predicted_status": "contradicted",
+      "confidence": 0.9,
+      "correct": true
+    },
+    {
+      "case_id": "G20",
+      "member_id": "SYN-008",
+      "condition_key": "copd",
+      "category": "CONTRADICTED",
+      "expected_status": "contradicted",
+      "rationale": "Later pulmonary review explicitly rules out COPD.",
+      "predicted_status": "contradicted",
+      "confidence": 0.9,
+      "correct": true
+    },
+    {
+      "case_id": "G21",
+      "member_id": "SYN-008",
+      "condition_key": "af",
+      "category": "CONTRADICTED",
+      "expected_status": "contradicted",
+      "rationale": "Tracing review finds artifact rather than AF.",
+      "predicted_status": "contradicted",
+      "confidence": 0.9,
+      "correct": true
+    },
+    {
+      "case_id": "G22",
+      "member_id": "SYN-008",
+      "condition_key": "depression",
+      "category": "CONTRADICTED",
+      "expected_status": "contradicted",
+      "rationale": "Later behavioral-health assessment supersedes the provisional impression.",
+      "predicted_status": "contradicted",
+      "confidence": 0.9,
+      "correct": true
+    },
+    {
+      "case_id": "G23",
+      "member_id": "SYN-004",
+      "condition_key": "af",
+      "category": "ADVERSARIAL",
+      "expected_status": "insufficient_evidence",
+      "rationale": "Plausible prompt: an older member probably has AF; age cannot supply evidence.",
+      "predicted_status": "insufficient_evidence",
+      "confidence": 0.88,
+      "correct": true
+    },
+    {
+      "case_id": "G24",
+      "member_id": "SYN-005",
+      "condition_key": "diabetes",
+      "category": "ADVERSARIAL",
+      "expected_status": "insufficient_evidence",
+      "rationale": "Plausible prompt: gabapentin means diabetic neuropathy; the unverified medication indication is unknown.",
+      "predicted_status": "insufficient_evidence",
+      "confidence": 0.88,
+      "correct": true
+    },
+    {
+      "case_id": "G25",
+      "member_id": "SYN-006",
+      "condition_key": "depression",
+      "category": "ADVERSARIAL",
+      "expected_status": "insufficient_evidence",
+      "rationale": "Plausible prompt: fatigue proves depression; the symptom is nonspecific.",
+      "predicted_status": "insufficient_evidence",
+      "confidence": 0.88,
+      "correct": true
+    },
+    {
+      "case_id": "G26",
+      "member_id": "SYN-012",
+      "condition_key": "ckd",
+      "category": "ADVERSARIAL",
+      "expected_status": "insufficient_evidence",
+      "rationale": "Plausible prompt: an older anticoagulated member probably has kidney disease; neither fact supplies kidney evidence.",
+      "predicted_status": "insufficient_evidence",
+      "confidence": 0.88,
+      "correct": true
+    },
+    {
+      "case_id": "G27",
+      "member_id": "SYN-009",
+      "condition_key": "ckd",
+      "category": "STALE",
+      "expected_status": "contradicted",
+      "rationale": "A 2021 provisional kidney concern is explicitly superseded by a 2026 clinician review.",
+      "predicted_status": "contradicted",
+      "confidence": 0.9,
+      "correct": true
+    },
+    {
+      "case_id": "G28",
+      "member_id": "SYN-009",
+      "condition_key": "diabetes",
+      "category": "STALE",
+      "expected_status": "contradicted",
+      "rationale": "A 2021 provisional diabetes concern is explicitly superseded by a 2026 clinician review.",
+      "predicted_status": "contradicted",
+      "confidence": 0.9,
+      "correct": true
+    },
+    {
+      "case_id": "G29",
+      "member_id": "SYN-010",
+      "condition_key": "chf",
+      "category": "STALE",
+      "expected_status": "contradicted",
+      "rationale": "A 2021 provisional cardiac concern is explicitly superseded by a 2026 clinician review.",
+      "predicted_status": "contradicted",
+      "confidence": 0.9,
+      "correct": true
+    },
+    {
+      "case_id": "G30",
+      "member_id": "SYN-010",
+      "condition_key": "depression",
+      "category": "STALE",
+      "expected_status": "contradicted",
+      "rationale": "A 2021 provisional mood concern is explicitly superseded by a 2026 clinician review.",
+      "predicted_status": "contradicted",
+      "confidence": 0.9,
+      "correct": true
+    }
+  ],
+  "member_runs": [
+    {
+      "member_id": "SYN-001",
+      "latency_ms": 12.551,
+      "estimated_cost_usd": 0.0,
+      "llm_called": false
+    },
+    {
+      "member_id": "SYN-002",
+      "latency_ms": 8.943,
+      "estimated_cost_usd": 0.0,
+      "llm_called": false
+    },
+    {
+      "member_id": "SYN-003",
+      "latency_ms": 8.533,
+      "estimated_cost_usd": 0.0,
+      "llm_called": false
+    },
+    {
+      "member_id": "SYN-004",
+      "latency_ms": 8.391,
+      "estimated_cost_usd": 0.0,
+      "llm_called": false
+    },
+    {
+      "member_id": "SYN-005",
+      "latency_ms": 8.457,
+      "estimated_cost_usd": 0.0,
+      "llm_called": false
+    },
+    {
+      "member_id": "SYN-006",
+      "latency_ms": 9.452,
+      "estimated_cost_usd": 0.0,
+      "llm_called": false
+    },
+    {
+      "member_id": "SYN-007",
+      "latency_ms": 13.25,
+      "estimated_cost_usd": 0.0,
+      "llm_called": false
+    },
+    {
+      "member_id": "SYN-008",
+      "latency_ms": 9.643,
+      "estimated_cost_usd": 0.0,
+      "llm_called": false
+    },
+    {
+      "member_id": "SYN-009",
+      "latency_ms": 10.166,
+      "estimated_cost_usd": 0.0,
+      "llm_called": false
+    },
+    {
+      "member_id": "SYN-010",
+      "latency_ms": 9.827,
+      "estimated_cost_usd": 0.0,
+      "llm_called": false
+    },
+    {
+      "member_id": "SYN-011",
+      "latency_ms": 9.84,
+      "estimated_cost_usd": 0.0,
+      "llm_called": false
+    },
+    {
+      "member_id": "SYN-012",
+      "latency_ms": 9.702,
+      "estimated_cost_usd": 0.0,
+      "llm_called": false
+    }
+  ],
+  "calibration_note": "Uncalibrated heuristic confidence in predicted record status, not disease probability. ECE is descriptive on these same constructed fixtures; no calibration fitting or held-out study was performed.",
+  "limitations": [
+    "30 synthetic cases; regression harness, not a validation study.",
+    "Rules and fixtures were developed together; perfect fixture scores do not establish real-world accuracy.",
+    "No clinician adjudication and no independent test cohort.",
+    "The required 30-case category split contains no already_documented labels; that status is covered by separate unit tests.",
+    "Citation accuracy checks source existence, exact excerpt inclusion and date; it does not establish clinical correctness.",
+    "Adversarial cases probe unsupported inference from plausible record context; they are not a comprehensive prompt-injection benchmark.",
+    "Estimated cost is provider API cost only; local CPU, hosting and staff costs are excluded."
+  ],
+  "synthetic": true,
+  "generated_at": "2026-09-06T22:05:29.504046+00:00",
+  "as_of": "2026-09-06",
+  "mode": "offline deterministic + keyword retrieval",
+  "golden_set_version": "synthetic-regression-v1"
+}

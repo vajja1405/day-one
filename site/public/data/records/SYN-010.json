@@ -1,0 +1,117 @@
+{
+  "member_id": "SYN-010",
+  "demographics": {
+    "age_band": "70–74",
+    "sex": "male"
+  },
+  "scenario": "stale",
+  "synthetic": true,
+  "as_of": "2026-09-06",
+  "coded_conditions": [],
+  "medications": [
+    {
+      "name": "acetaminophen",
+      "status": "active",
+      "date": "2025-01-15",
+      "source_doc_id": "SYN-010-medications"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "E-SYN-010-chf-history",
+      "date": "2021-05-12",
+      "encounter_type": "external specialist review",
+      "source_doc_id": "SYN-010-chf-history"
+    },
+    {
+      "encounter_id": "E-SYN-010-depression-history",
+      "date": "2021-05-12",
+      "encounter_type": "external specialist review",
+      "source_doc_id": "SYN-010-depression-history"
+    },
+    {
+      "encounter_id": "E-SYN-010-chf-review",
+      "date": "2026-07-21",
+      "encounter_type": "external specialist review",
+      "source_doc_id": "SYN-010-chf-review"
+    },
+    {
+      "encounter_id": "E-SYN-010-depression-review",
+      "date": "2026-07-21",
+      "encounter_type": "external specialist review",
+      "source_doc_id": "SYN-010-depression-review"
+    },
+    {
+      "encounter_id": "E-SYN-010-intake",
+      "date": "2026-08-25",
+      "encounter_type": "intake",
+      "source_doc_id": "SYN-010-intake"
+    }
+  ],
+  "observations": [
+    {
+      "observation_id": "O-SYN-010-chf-lab",
+      "name": "BNP",
+      "loinc": "30934-4",
+      "value": 310.0,
+      "unit": "pg/mL",
+      "date": "2021-05-12",
+      "reference_low": 0.0,
+      "reference_high": 100.0,
+      "condition_key": "chf",
+      "source_doc_id": "SYN-010-chf-lab"
+    }
+  ],
+  "record_completeness": 1.0,
+  "completeness_components": {
+    "encounters": 0.25,
+    "labs": 0.25,
+    "med_list": 0.2,
+    "longitudinal": 0.15,
+    "recency": 0.15
+  },
+  "source_documents": [
+    {
+      "doc_id": "SYN-010-chf-history",
+      "doc_type": "encounter_note",
+      "date": "2021-05-12",
+      "excerpt": "SYNTHETIC. Historical outside note records a provisional concern for heart failure; current status was not established."
+    },
+    {
+      "doc_id": "SYN-010-chf-lab",
+      "doc_type": "lab_result",
+      "date": "2021-05-12",
+      "excerpt": "SYNTHETIC. BNP: 310 pg/mL; LOINC 30934-4. This isolated result cannot establish heart failure."
+    },
+    {
+      "doc_id": "SYN-010-depression-history",
+      "doc_type": "encounter_note",
+      "date": "2021-05-12",
+      "excerpt": "SYNTHETIC. Historical outside note records a provisional concern for depression; current status was not established."
+    },
+    {
+      "doc_id": "SYN-010-medications",
+      "doc_type": "med_list",
+      "date": "2025-01-15",
+      "excerpt": "SYNTHETIC. External medication list, active as recorded: acetaminophen. Indications, doses and current use need clinician reconciliation; a medication alone does not establish a condition."
+    },
+    {
+      "doc_id": "SYN-010-chf-review",
+      "doc_type": "encounter_note",
+      "date": "2026-07-21",
+      "excerpt": "SYNTHETIC. Follow-up cardiology review: heart failure ruled out following echocardiogram and clinical review; earlier BNP elevation was transient. Do not carry the historical suggestion forward."
+    },
+    {
+      "doc_id": "SYN-010-depression-review",
+      "doc_type": "encounter_note",
+      "date": "2026-07-21",
+      "excerpt": "SYNTHETIC. Follow-up behavioral-health review: no evidence of current depression after clinical reassessment; earlier provisional impression was situational and resolved. Do not carry the historical suggestion forward."
+    },
+    {
+      "doc_id": "SYN-010-intake",
+      "doc_type": "encounter_note",
+      "date": "2026-08-25",
+      "excerpt": "SYNTHETIC. New-member intake. Outside records are partial; allergies, vaccination history, preventive screening history and member priorities still need reconciliation."
+    }
+  ]
+}

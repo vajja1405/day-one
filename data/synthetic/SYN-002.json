@@ -1,0 +1,94 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "member_id": "SYN-002",
+  "meta": {
+    "label": "SYNTHETIC",
+    "scenario": "rich",
+    "generated_for": "Independent Day One demonstration; no real person"
+  },
+  "demographics": {
+    "age_band": "70–74",
+    "sex": "male"
+  },
+  "coded_conditions": [],
+  "medications": [
+    {
+      "name": "tiotropium",
+      "status": "active",
+      "date": "2026-08-10",
+      "source_doc_id": "SYN-002-medications"
+    },
+    {
+      "name": "apixaban",
+      "status": "active",
+      "date": "2026-08-10",
+      "source_doc_id": "SYN-002-medications"
+    },
+    {
+      "name": "sertraline",
+      "status": "active",
+      "date": "2026-08-10",
+      "source_doc_id": "SYN-002-medications"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "E-SYN-002-intake",
+      "date": "2026-08-25",
+      "encounter_type": "intake",
+      "source_doc_id": "SYN-002-intake"
+    },
+    {
+      "encounter_id": "E-SYN-002-copd-history",
+      "date": "2026-02-12",
+      "encounter_type": "external specialist review",
+      "source_doc_id": "SYN-002-copd-history"
+    },
+    {
+      "encounter_id": "E-SYN-002-af-history",
+      "date": "2026-02-12",
+      "encounter_type": "external specialist review",
+      "source_doc_id": "SYN-002-af-history"
+    },
+    {
+      "encounter_id": "E-SYN-002-depression-history",
+      "date": "2026-02-12",
+      "encounter_type": "external specialist review",
+      "source_doc_id": "SYN-002-depression-history"
+    }
+  ],
+  "observations": [],
+  "source_documents": [
+    {
+      "doc_id": "SYN-002-intake",
+      "doc_type": "encounter_note",
+      "date": "2026-08-25",
+      "excerpt": "SYNTHETIC. New-member intake. Outside records are partial; allergies, vaccination history, preventive screening history and member priorities still need reconciliation."
+    },
+    {
+      "doc_id": "SYN-002-copd-history",
+      "doc_type": "encounter_note",
+      "date": "2026-02-12",
+      "excerpt": "SYNTHETIC. Pulmonary clinician documents COPD after reviewing symptoms, exposure history and post-bronchodilator spirometry. External history awaits reconciliation at the first visit."
+    },
+    {
+      "doc_id": "SYN-002-af-history",
+      "doc_type": "encounter_note",
+      "date": "2026-02-12",
+      "excerpt": "SYNTHETIC. Cardiology clinician documents atrial fibrillation after 12-lead ECG review. External history awaits reconciliation at the first visit."
+    },
+    {
+      "doc_id": "SYN-002-depression-history",
+      "doc_type": "encounter_note",
+      "date": "2026-02-12",
+      "excerpt": "SYNTHETIC. Behavioral-health clinician documents depression after clinical interview and longitudinal assessment. External history awaits reconciliation at the first visit."
+    },
+    {
+      "doc_id": "SYN-002-medications",
+      "doc_type": "med_list",
+      "date": "2026-08-10",
+      "excerpt": "SYNTHETIC. External medication list, active as recorded: tiotropium, apixaban, sertraline. Indications, doses and current use need clinician reconciliation; a medication alone does not establish a condition."
+    }
+  ]
+}

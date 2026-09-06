@@ -1,0 +1,122 @@
+{
+  "member_id": "SYN-008",
+  "demographics": {
+    "age_band": "80–84",
+    "sex": "male"
+  },
+  "scenario": "contradictory",
+  "synthetic": true,
+  "as_of": "2026-09-06",
+  "coded_conditions": [],
+  "medications": [
+    {
+      "name": "albuterol",
+      "status": "active",
+      "date": "2026-08-10",
+      "source_doc_id": "SYN-008-medications"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "E-SYN-008-af-history",
+      "date": "2026-02-12",
+      "encounter_type": "external specialist review",
+      "source_doc_id": "SYN-008-af-history"
+    },
+    {
+      "encounter_id": "E-SYN-008-copd-history",
+      "date": "2026-02-12",
+      "encounter_type": "external specialist review",
+      "source_doc_id": "SYN-008-copd-history"
+    },
+    {
+      "encounter_id": "E-SYN-008-depression-history",
+      "date": "2026-02-12",
+      "encounter_type": "external specialist review",
+      "source_doc_id": "SYN-008-depression-history"
+    },
+    {
+      "encounter_id": "E-SYN-008-af-review",
+      "date": "2026-07-21",
+      "encounter_type": "external specialist review",
+      "source_doc_id": "SYN-008-af-review"
+    },
+    {
+      "encounter_id": "E-SYN-008-copd-review",
+      "date": "2026-07-21",
+      "encounter_type": "external specialist review",
+      "source_doc_id": "SYN-008-copd-review"
+    },
+    {
+      "encounter_id": "E-SYN-008-depression-review",
+      "date": "2026-07-21",
+      "encounter_type": "external specialist review",
+      "source_doc_id": "SYN-008-depression-review"
+    },
+    {
+      "encounter_id": "E-SYN-008-intake",
+      "date": "2026-08-25",
+      "encounter_type": "intake",
+      "source_doc_id": "SYN-008-intake"
+    }
+  ],
+  "observations": [],
+  "record_completeness": 0.75,
+  "completeness_components": {
+    "encounters": 0.25,
+    "labs": 0.0,
+    "med_list": 0.2,
+    "longitudinal": 0.15,
+    "recency": 0.15
+  },
+  "source_documents": [
+    {
+      "doc_id": "SYN-008-af-history",
+      "doc_type": "encounter_note",
+      "date": "2026-02-12",
+      "excerpt": "SYNTHETIC. Historical outside note records a provisional concern for atrial fibrillation; current status was not established."
+    },
+    {
+      "doc_id": "SYN-008-copd-history",
+      "doc_type": "encounter_note",
+      "date": "2026-02-12",
+      "excerpt": "SYNTHETIC. Historical outside note records a provisional concern for copd; current status was not established."
+    },
+    {
+      "doc_id": "SYN-008-depression-history",
+      "doc_type": "encounter_note",
+      "date": "2026-02-12",
+      "excerpt": "SYNTHETIC. Historical outside note records a provisional concern for depression; current status was not established."
+    },
+    {
+      "doc_id": "SYN-008-af-review",
+      "doc_type": "encounter_note",
+      "date": "2026-07-21",
+      "excerpt": "SYNTHETIC. Follow-up cardiology review: atrial fibrillation ruled out after tracing review; the earlier rhythm report was artifact. Do not carry the historical suggestion forward."
+    },
+    {
+      "doc_id": "SYN-008-copd-review",
+      "doc_type": "encounter_note",
+      "date": "2026-07-21",
+      "excerpt": "SYNTHETIC. Follow-up pulmonary review: COPD ruled out after symptom and spirometry review; earlier respiratory symptoms resolved. Do not carry the historical suggestion forward."
+    },
+    {
+      "doc_id": "SYN-008-depression-review",
+      "doc_type": "encounter_note",
+      "date": "2026-07-21",
+      "excerpt": "SYNTHETIC. Follow-up behavioral-health review: no evidence of current depression after clinical reassessment; earlier provisional impression was situational and resolved. Do not carry the historical suggestion forward."
+    },
+    {
+      "doc_id": "SYN-008-medications",
+      "doc_type": "med_list",
+      "date": "2026-08-10",
+      "excerpt": "SYNTHETIC. External medication list, active as recorded: albuterol. Indications, doses and current use need clinician reconciliation; a medication alone does not establish a condition."
+    },
+    {
+      "doc_id": "SYN-008-intake",
+      "doc_type": "encounter_note",
+      "date": "2026-08-25",
+      "excerpt": "SYNTHETIC. New-member intake. Outside records are partial; allergies, vaccination history, preventive screening history and member priorities still need reconciliation."
+    }
+  ]
+}

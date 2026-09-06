@@ -1,0 +1,36 @@
+{
+  "version": "dayone-context-2026-09-06-v1",
+  "purpose": "Paraphrased public clinical context only. Never patient evidence or a diagnostic rulebook.",
+  "snippets": [
+    {
+      "snippet_id": "KB-CKD-01", "condition_key": "ckd", "title": "Kidney history requires longitudinal context",
+      "text": "Chronic kidney disease assessment concerns abnormalities persisting for at least three months. One low eGFR during an acute illness cannot establish chronicity; retrieve longitudinal measurements and the clinician assessment.",
+      "source_url": "https://www.kidney.org/kidney-failure-risk-factor-estimated-glomerular-filtration-rate-egfr", "reviewed_at": "2026-09-06"
+    },
+    {
+      "snippet_id": "KB-COPD-01", "condition_key": "copd", "title": "COPD history needs clinical and spirometry context",
+      "text": "COPD diagnosis requires appropriate clinical context and spirometry assessment. An inhaler or a respiratory symptom alone is insufficient to establish the diagnosis.",
+      "source_url": "https://goldcopd.org/gold-spirometry-guide/", "reviewed_at": "2026-09-06"
+    },
+    {
+      "snippet_id": "KB-AF-01", "condition_key": "af", "title": "Atrial-fibrillation assessment relies on rhythm evidence",
+      "text": "NICE recommends a 12-lead ECG to diagnose suspected atrial fibrillation when an irregular pulse is detected. Review the tracing interpretation; anticoagulant use alone does not establish the indication.",
+      "source_url": "https://www.nice.org.uk/guidance/NG196/chapter/recommendations", "reviewed_at": "2026-09-06"
+    },
+    {
+      "snippet_id": "KB-INTAKE-DM", "condition_key": "diabetes", "title": "Prototype documentation policy: diabetes",
+      "text": "This demonstration surfaces a recent explicit external clinician assessment for reconciliation. Isolated laboratory results, medications and demographic risk never establish a condition within this software.",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis", "reviewed_at": "2026-09-06"
+    },
+    {
+      "snippet_id": "KB-INTAKE-HF", "condition_key": "chf", "title": "Prototype documentation policy: heart failure",
+      "text": "Review the external clinician assessment and supporting cardiac workup. A historical BNP result or diuretic prescription alone is not adequate patient-specific support in this demonstration.",
+      "source_url": "https://www.nice.org.uk/guidance/ng106/chapter/recommendations", "reviewed_at": "2026-09-06"
+    },
+    {
+      "snippet_id": "KB-INTAKE-MOOD", "condition_key": "depression", "title": "Prototype documentation policy: depression",
+      "text": "Review the clinician's assessment and whether it was provisional or superseded. Medication use or a symptom mention alone does not establish a depression history in this demonstration.",
+      "source_url": "https://www.nice.org.uk/guidance/ng222/chapter/recommendations", "reviewed_at": "2026-09-06"
+    }
+  ]
+}

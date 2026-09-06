@@ -1,0 +1,10 @@
+[project]
+name = "day-one-synthetic"
+version = "0.1.0"
+description = "Synthetic, evidence-cited first-visit record review"
+requires-python = ">=3.11"
+dependencies = ["pydantic>=2.10,<3", "fastapi>=0.115,<1", "httpx>=0.28,<1"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

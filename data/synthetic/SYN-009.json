@@ -1,0 +1,167 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "member_id": "SYN-009",
+  "meta": {
+    "label": "SYNTHETIC",
+    "scenario": "stale",
+    "generated_for": "Independent Day One demonstration; no real person"
+  },
+  "demographics": {
+    "age_band": "65–69",
+    "sex": "female"
+  },
+  "coded_conditions": [],
+  "medications": [
+    {
+      "name": "acetaminophen",
+      "status": "active",
+      "date": "2026-08-10",
+      "source_doc_id": "SYN-009-medications"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "E-SYN-009-intake",
+      "date": "2026-08-25",
+      "encounter_type": "intake",
+      "source_doc_id": "SYN-009-intake"
+    },
+    {
+      "encounter_id": "E-SYN-009-ckd-history",
+      "date": "2021-05-12",
+      "encounter_type": "external specialist review",
+      "source_doc_id": "SYN-009-ckd-history"
+    },
+    {
+      "encounter_id": "E-SYN-009-ckd-review",
+      "date": "2026-07-21",
+      "encounter_type": "external specialist review",
+      "source_doc_id": "SYN-009-ckd-review"
+    },
+    {
+      "encounter_id": "E-SYN-009-diabetes-history",
+      "date": "2021-05-12",
+      "encounter_type": "external specialist review",
+      "source_doc_id": "SYN-009-diabetes-history"
+    },
+    {
+      "encounter_id": "E-SYN-009-diabetes-review",
+      "date": "2026-07-21",
+      "encounter_type": "external specialist review",
+      "source_doc_id": "SYN-009-diabetes-review"
+    }
+  ],
+  "observations": [
+    {
+      "observation_id": "O-SYN-009-ckd-lab",
+      "name": "eGFR",
+      "loinc": "33914-3",
+      "value": 44.0,
+      "unit": "mL/min/1.73m2",
+      "date": "2021-05-12",
+      "reference_low": 60.0,
+      "reference_high": null,
+      "condition_key": "ckd",
+      "source_doc_id": "SYN-009-ckd-lab"
+    },
+    {
+      "observation_id": "O-SYN-009-ckd-repeat",
+      "name": "eGFR",
+      "loinc": "33914-3",
+      "value": 82.0,
+      "unit": "mL/min/1.73m2",
+      "date": "2026-07-20",
+      "reference_low": 60.0,
+      "reference_high": null,
+      "condition_key": "ckd",
+      "source_doc_id": "SYN-009-ckd-repeat"
+    },
+    {
+      "observation_id": "O-SYN-009-diabetes-lab",
+      "name": "Hemoglobin A1c",
+      "loinc": "4548-4",
+      "value": 7.4,
+      "unit": "%",
+      "date": "2021-05-12",
+      "reference_low": 4.0,
+      "reference_high": 5.6,
+      "condition_key": "diabetes",
+      "source_doc_id": "SYN-009-diabetes-lab"
+    },
+    {
+      "observation_id": "O-SYN-009-diabetes-repeat",
+      "name": "Hemoglobin A1c",
+      "loinc": "4548-4",
+      "value": 5.4,
+      "unit": "%",
+      "date": "2026-07-20",
+      "reference_low": 4.0,
+      "reference_high": 5.6,
+      "condition_key": "diabetes",
+      "source_doc_id": "SYN-009-diabetes-repeat"
+    }
+  ],
+  "source_documents": [
+    {
+      "doc_id": "SYN-009-intake",
+      "doc_type": "encounter_note",
+      "date": "2026-08-25",
+      "excerpt": "SYNTHETIC. New-member intake. Outside records are partial; allergies, vaccination history, preventive screening history and member priorities still need reconciliation."
+    },
+    {
+      "doc_id": "SYN-009-ckd-history",
+      "doc_type": "encounter_note",
+      "date": "2021-05-12",
+      "excerpt": "SYNTHETIC. Historical outside note records a provisional concern for chronic kidney disease; current status was not established."
+    },
+    {
+      "doc_id": "SYN-009-ckd-lab",
+      "doc_type": "lab_result",
+      "date": "2021-05-12",
+      "excerpt": "SYNTHETIC. eGFR: 44 mL/min/1.73m2; LOINC 33914-3. This isolated result cannot establish chronic kidney disease."
+    },
+    {
+      "doc_id": "SYN-009-ckd-review",
+      "doc_type": "encounter_note",
+      "date": "2026-07-21",
+      "excerpt": "SYNTHETIC. Follow-up clinician review: chronic kidney disease ruled out; earlier low eGFR was transient during dehydration and has normalised on repeat testing. Do not carry the historical suggestion forward."
+    },
+    {
+      "doc_id": "SYN-009-ckd-repeat",
+      "doc_type": "lab_result",
+      "date": "2026-07-20",
+      "excerpt": "SYNTHETIC. eGFR: 82 mL/min/1.73m2; LOINC 33914-3. Result reviewed in the subsequent clinician note."
+    },
+    {
+      "doc_id": "SYN-009-diabetes-history",
+      "doc_type": "encounter_note",
+      "date": "2021-05-12",
+      "excerpt": "SYNTHETIC. Historical outside note records a provisional concern for type 2 diabetes; current status was not established."
+    },
+    {
+      "doc_id": "SYN-009-diabetes-lab",
+      "doc_type": "lab_result",
+      "date": "2021-05-12",
+      "excerpt": "SYNTHETIC. Hemoglobin A1c: 7.4 %; LOINC 4548-4. This isolated result cannot establish type 2 diabetes."
+    },
+    {
+      "doc_id": "SYN-009-diabetes-review",
+      "doc_type": "encounter_note",
+      "date": "2026-07-21",
+      "excerpt": "SYNTHETIC. Follow-up clinician review: type 2 diabetes ruled out on repeat testing; earlier hyperglycemia was transient during steroid treatment and resolved. Do not carry the historical suggestion forward."
+    },
+    {
+      "doc_id": "SYN-009-diabetes-repeat",
+      "doc_type": "lab_result",
+      "date": "2026-07-20",
+      "excerpt": "SYNTHETIC. Hemoglobin A1c: 5.4 %; LOINC 4548-4. Result reviewed in the subsequent clinician note."
+    },
+    {
+      "doc_id": "SYN-009-medications",
+      "doc_type": "med_list",
+      "date": "2026-08-10",
+      "excerpt": "SYNTHETIC. External medication list, active as recorded: acetaminophen. Indications, doses and current use need clinician reconciliation; a medication alone does not establish a condition."
+    }
+  ]
+}

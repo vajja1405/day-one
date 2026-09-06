@@ -1,0 +1,33 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "member_id": "SYN-006",
+  "meta": {
+    "label": "SYNTHETIC",
+    "scenario": "sparse",
+    "generated_for": "Independent Day One demonstration; no real person"
+  },
+  "demographics": {
+    "age_band": "70–74",
+    "sex": "male"
+  },
+  "coded_conditions": [],
+  "medications": [],
+  "encounters": [
+    {
+      "encounter_id": "E-SYN-006-intake",
+      "date": "2026-08-25",
+      "encounter_type": "intake",
+      "source_doc_id": "SYN-006-intake"
+    }
+  ],
+  "observations": [],
+  "source_documents": [
+    {
+      "doc_id": "SYN-006-intake",
+      "doc_type": "encounter_note",
+      "date": "2026-08-25",
+      "excerpt": "SYNTHETIC. New-member intake. Outside records are partial; allergies, vaccination history, preventive screening history and member priorities still need reconciliation. Member reports fatigue and occasional ankle swelling; no specialist assessment or confirmatory tests are available."
+    }
+  ]
+}
