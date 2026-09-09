@@ -12,6 +12,40 @@ Management described roughly $70 PMPM of typical gross-profit improvement betwee
 
 The calculator exposes five inputs. Its defaults produce $37.00 million of modeled annual cohort gap, $12.21 million of assumed information component, and $6.10 million of illustrative annualized gross opportunity **before costs**. The 28% cohort share, 33% information share, and 50% acceleration share are author assumptions. This scenario does not model coverage, uptake, retention, costs, or a causal effect. Both information assumptions can be set to zero.
 
+## Precedent — matched-cohort evidence
+
+A second capability in `precedent/`. Day One tells a clinician what one member's record says.
+Precedent answers a different question: **what happened to members like this one?**
+
+It is precomputed rather than queried. The published barrier to point-of-care cohort tools is that
+cohort generation takes weeks, which is untenable in a fifteen-minute visit; precomputation trades
+freshness for latency, and freshness is not the binding constraint here.
+
+**Validation against known ground truth.** The synthetic population is generated with a true effect
+per care path and with realistic confounding (sicker members are referred far more often), so the
+analysis can be checked against something controlled.
+
+| Care path | True | Naive comparison | Matched cohorts |
+|---|---|---|---|
+| nephrology referral | **0.75** (protective) | **1.14 — wrong direction** | **0.71** |
+| care management | **1.00** (no effect) | 1.24 | **1.01** |
+| medication adjustment | 0.92 | 1.00 | 0.77 |
+
+Naive comparison inverts the sign on the strongest true effect. Matched cohorts recover it, and
+correctly return the null on the path with no real effect. **On the weakest true effect, matching is
+worse than naive comparison** — it overstates the benefit. That is a limitation of the method as
+built and it is reported rather than tuned away.
+
+It refuses. Below a 30-member cohort it returns no result: `only 4 similar members found; minimum
+is 30`. Both crude and severity-adjusted rates are always returned, and when they disagree the
+report says so in plain language.
+
+**Prior art.** This is not a new idea. Aggregate patient data at the point of care was proposed as
+the "Green Button" (Shah et al., *Health Affairs*, 2014) and commercialised for health systems by
+Atropos Health. What I could not find is a payer-side implementation — one that follows the member
+beyond a single institution, includes cost, and is precomputed for point-of-care latency. If one
+exists I would rather use it than rebuild it.
+
 ## Architecture
 
 ```mermaid

@@ -1,0 +1,371 @@
+{
+  "synthetic": true,
+  "population_size": 6000,
+  "min_cohort_size": 30,
+  "cohorts_reportable": 364,
+  "cohorts_sampled": 400,
+  "features": [
+    {
+      "name": "age_band",
+      "why": "utilisation and risk both scale steeply with age in an MA population"
+    },
+    {
+      "name": "ckd",
+      "why": "chronic condition; drives both cost and care-path choice"
+    },
+    {
+      "name": "chf",
+      "why": "the most admission-driving condition in this population"
+    },
+    {
+      "name": "copd",
+      "why": "frequent exacerbation pattern, distinct care pathway"
+    },
+    {
+      "name": "diabetes",
+      "why": "comorbid with CKD; changes management of everything else"
+    },
+    {
+      "name": "afib",
+      "why": "anticoagulation decisions dominate the care path"
+    },
+    {
+      "name": "med_count",
+      "why": "polypharmacy is a severity proxy independent of diagnosis list"
+    },
+    {
+      "name": "egfr",
+      "why": "kidney function; the single most informative continuous lab here"
+    },
+    {
+      "name": "egfr_declining",
+      "why": "direction of travel matters more than level for referral decisions"
+    },
+    {
+      "name": "prior_admissions",
+      "why": "past utilisation is the strongest single predictor of future"
+    },
+    {
+      "name": "care_gaps",
+      "why": "engagement proxy; correlates with follow-through on any plan"
+    }
+  ],
+  "true_effects": {
+    "nephrology_referral": 0.75,
+    "medication_adjustment": 0.92,
+    "care_management": 1.0,
+    "no_documented_change": 1.0
+  },
+  "validation": [
+    {
+      "path": "nephrology_referral",
+      "true": 0.75,
+      "naive": 1.14,
+      "matched": 0.709,
+      "naive_error": 0.39,
+      "matched_error": 0.041,
+      "winner": "matched",
+      "sign_inverted": true
+    },
+    {
+      "path": "medication_adjustment",
+      "true": 0.92,
+      "naive": 1.0,
+      "matched": 0.767,
+      "naive_error": 0.08,
+      "matched_error": 0.153,
+      "winner": "naive",
+      "sign_inverted": false
+    },
+    {
+      "path": "care_management",
+      "true": 1.0,
+      "naive": 1.241,
+      "matched": 1.015,
+      "naive_error": 0.241,
+      "matched_error": 0.015,
+      "winner": "matched",
+      "sign_inverted": false
+    }
+  ],
+  "examples": [
+    {
+      "member_id": "POP-01304",
+      "cohort_size": 351,
+      "confidence": "reportable",
+      "reason": "",
+      "matched_on": [
+        "age",
+        "conditions",
+        "eGFR and direction",
+        "prior admissions",
+        "medication count"
+      ],
+      "adjusted_for": [
+        "severity stratum (low/moderate/high)"
+      ],
+      "paths": [
+        {
+          "label": "medication_adjustment",
+          "n": 115,
+          "share": 0.32763532763532766,
+          "crude_admission_rate": 0.165,
+          "adjusted_admission_rate": 0.165,
+          "median_cost": 20199.0,
+          "ci_low": 0.108,
+          "ci_high": 0.244,
+          "note": ""
+        },
+        {
+          "label": "no_documented_change",
+          "n": 103,
+          "share": 0.2934472934472934,
+          "crude_admission_rate": 0.252,
+          "adjusted_admission_rate": 0.252,
+          "median_cost": 20873.0,
+          "ci_low": 0.178,
+          "ci_high": 0.344,
+          "note": ""
+        },
+        {
+          "label": "nephrology_referral",
+          "n": 86,
+          "share": 0.245014245014245,
+          "crude_admission_rate": 0.186,
+          "adjusted_admission_rate": 0.192,
+          "median_cost": 19441.0,
+          "ci_low": 0.118,
+          "ci_high": 0.281,
+          "note": ""
+        },
+        {
+          "label": "care_management",
+          "n": 47,
+          "share": 0.1339031339031339,
+          "crude_admission_rate": 0.255,
+          "adjusted_admission_rate": 0.256,
+          "median_cost": 19874.0,
+          "ci_low": 0.153,
+          "ci_high": 0.395,
+          "note": ""
+        }
+      ],
+      "caveats": [
+        "Observational, not randomised. Members were not assigned to these paths at random.",
+        "Adjusted for severity stratum only. Residual confounding is likely.",
+        "Cost is total cost of care in the 12 months after an index visit, not attributable spend.",
+        "All data on this page is synthetic."
+      ],
+      "profile": {
+        "age_band": 77,
+        "ckd": 1.0,
+        "chf": 0.0,
+        "copd": 0.0,
+        "diabetes": 0.0,
+        "afib": 0.0,
+        "med_count": 7,
+        "egfr": 55.08767233958139,
+        "egfr_declining": 0.0,
+        "prior_admissions": 1,
+        "care_gaps": 1
+      },
+      "severity": 0.308
+    },
+    {
+      "member_id": "POP-05694",
+      "cohort_size": 350,
+      "confidence": "reportable",
+      "reason": "",
+      "matched_on": [
+        "age",
+        "conditions",
+        "eGFR and direction",
+        "prior admissions",
+        "medication count"
+      ],
+      "adjusted_for": [
+        "severity stratum (low/moderate/high)"
+      ],
+      "paths": [
+        {
+          "label": "medication_adjustment",
+          "n": 115,
+          "share": 0.32857142857142857,
+          "crude_admission_rate": 0.165,
+          "adjusted_admission_rate": 0.165,
+          "median_cost": 20360.0,
+          "ci_low": 0.108,
+          "ci_high": 0.244,
+          "note": ""
+        },
+        {
+          "label": "no_documented_change",
+          "n": 99,
+          "share": 0.28285714285714286,
+          "crude_admission_rate": 0.242,
+          "adjusted_admission_rate": 0.242,
+          "median_cost": 20920.0,
+          "ci_low": 0.169,
+          "ci_high": 0.335,
+          "note": ""
+        },
+        {
+          "label": "nephrology_referral",
+          "n": 88,
+          "share": 0.25142857142857145,
+          "crude_admission_rate": 0.182,
+          "adjusted_admission_rate": 0.185,
+          "median_cost": 19441.0,
+          "ci_low": 0.115,
+          "ci_high": 0.275,
+          "note": ""
+        },
+        {
+          "label": "care_management",
+          "n": 48,
+          "share": 0.13714285714285715,
+          "crude_admission_rate": 0.25,
+          "adjusted_admission_rate": 0.25,
+          "median_cost": 20274.0,
+          "ci_low": 0.149,
+          "ci_high": 0.388,
+          "note": ""
+        }
+      ],
+      "caveats": [
+        "Observational, not randomised. Members were not assigned to these paths at random.",
+        "Adjusted for severity stratum only. Residual confounding is likely.",
+        "Cost is total cost of care in the 12 months after an index visit, not attributable spend.",
+        "All data on this page is synthetic."
+      ],
+      "profile": {
+        "age_band": 77,
+        "ckd": 1.0,
+        "chf": 0.0,
+        "copd": 0.0,
+        "diabetes": 0.0,
+        "afib": 0.0,
+        "med_count": 9,
+        "egfr": 49.53855290132483,
+        "egfr_declining": 0.0,
+        "prior_admissions": 1,
+        "care_gaps": 1
+      },
+      "severity": 0.317
+    },
+    {
+      "member_id": "POP-05625",
+      "cohort_size": 345,
+      "confidence": "reportable",
+      "reason": "",
+      "matched_on": [
+        "age",
+        "conditions",
+        "eGFR and direction",
+        "prior admissions",
+        "medication count"
+      ],
+      "adjusted_for": [
+        "severity stratum (low/moderate/high)"
+      ],
+      "paths": [
+        {
+          "label": "medication_adjustment",
+          "n": 112,
+          "share": 0.32463768115942027,
+          "crude_admission_rate": 0.161,
+          "adjusted_admission_rate": 0.161,
+          "median_cost": 20280.0,
+          "ci_low": 0.104,
+          "ci_high": 0.24,
+          "note": ""
+        },
+        {
+          "label": "no_documented_change",
+          "n": 99,
+          "share": 0.28695652173913044,
+          "crude_admission_rate": 0.253,
+          "adjusted_admission_rate": 0.253,
+          "median_cost": 20920.0,
+          "ci_low": 0.177,
+          "ci_high": 0.346,
+          "note": ""
+        },
+        {
+          "label": "nephrology_referral",
+          "n": 87,
+          "share": 0.25217391304347825,
+          "crude_admission_rate": 0.195,
+          "adjusted_admission_rate": 0.195,
+          "median_cost": 19733.0,
+          "ci_low": 0.126,
+          "ci_high": 0.291,
+          "note": ""
+        },
+        {
+          "label": "care_management",
+          "n": 47,
+          "share": 0.13623188405797101,
+          "crude_admission_rate": 0.277,
+          "adjusted_admission_rate": 0.276,
+          "median_cost": 20822.0,
+          "ci_low": 0.169,
+          "ci_high": 0.418,
+          "note": ""
+        }
+      ],
+      "caveats": [
+        "Observational, not randomised. Members were not assigned to these paths at random.",
+        "Adjusted for severity stratum only. Residual confounding is likely.",
+        "Cost is total cost of care in the 12 months after an index visit, not attributable spend.",
+        "All data on this page is synthetic."
+      ],
+      "profile": {
+        "age_band": 77,
+        "ckd": 1.0,
+        "chf": 0.0,
+        "copd": 0.0,
+        "diabetes": 0.0,
+        "afib": 0.0,
+        "med_count": 9,
+        "egfr": 50.80670529733644,
+        "egfr_declining": 0.0,
+        "prior_admissions": 1,
+        "care_gaps": 3
+      },
+      "severity": 0.315
+    }
+  ],
+  "refusal": {
+    "member_id": "SYN-RARE",
+    "cohort_size": 4,
+    "confidence": "insufficient",
+    "reason": "only 4 similar members found; minimum is 30",
+    "matched_on": [],
+    "adjusted_for": [],
+    "paths": [],
+    "caveats": [
+      "No result shown. A distribution over this few members would be noise."
+    ],
+    "profile": {
+      "age_band": 90,
+      "ckd": 1,
+      "chf": 1,
+      "copd": 1,
+      "diabetes": 1,
+      "afib": 1,
+      "med_count": 18,
+      "egfr": 13,
+      "egfr_declining": 1,
+      "prior_admissions": 4,
+      "care_gaps": 6
+    }
+  },
+  "limitations": [
+    "Entirely synthetic. The confounding structure is one I invented; real confounding is worse and stranger.",
+    "Severity is fully observable here by construction. In real data it is partly unobserved, and that is exactly where residual confounding lives.",
+    "Matching is not uniformly better. On the weakest true effect it overstates the benefit and does worse than naive comparison.",
+    "Cohort sizes here are generous. A real deployment might find common profiles too sparse, which would end the idea.",
+    "Observational throughout. Nothing here establishes causation."
+  ]
+}

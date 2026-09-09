@@ -1,0 +1,44 @@
+/* Precedent — matched-cohort evidence. Same editorial language as the rest of the memo. */
+.pr-premise{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;margin-bottom:46px}
+.pr-premise p:not(.lead){font-size:.9375rem;color:var(--muted-foreground)}
+.pr-headline{border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-bottom:26px}
+.pr-headline-top{background:var(--ink-panel);color:#fff;padding:30px 34px}
+.pr-headline-top .eyebrow{color:#bcc9e5}
+.pr-headline-top h3{font-size:clamp(1.5rem,2.6vw,2.1rem);letter-spacing:-.035em;margin:14px 0 0;line-height:1.25;max-width:760px}
+.pr-headline-top p{color:#bec7da;font-size:.9375rem;margin:14px 0 0;max-width:720px;line-height:1.65}
+.pr-table{width:100%;border-collapse:collapse;background:var(--background)}
+.pr-table th{font-size:.75rem;letter-spacing:.06em;font-weight:650;color:var(--muted-foreground);text-align:right;padding:16px 14px;border-bottom:1px solid var(--border)}
+.pr-table th:first-child{text-align:left;padding-left:34px}
+.pr-table td{padding:17px 14px;font-size:.875rem;text-align:right;font-variant-numeric:tabular-nums;border-bottom:1px solid var(--border)}
+.pr-table td:first-child{text-align:left;padding-left:34px;font-weight:600}
+.pr-table tr:last-child td{border-bottom:0}
+.pr-path-note{display:block;font-size:.75rem;color:var(--muted-foreground);font-weight:400;margin-top:4px}
+.pr-bad{color:var(--against);font-weight:650}
+.pr-good{color:var(--support);font-weight:650}
+.pr-win{font-size:.75rem;border:1px solid var(--border);border-radius:2px;padding:3px 7px;white-space:nowrap}
+.pr-win.matched{border-color:var(--support);color:var(--support)}
+.pr-win.naive{border-color:var(--against);color:var(--against)}
+.pr-flag{display:inline-flex;align-items:center;gap:6px;background:var(--against-bg);color:var(--against);font-size:.75rem;font-weight:650;padding:3px 8px;border-radius:2px;margin-left:10px;white-space:nowrap}
+.pr-readout{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:26px 0 0}
+.pr-card{border:1px solid var(--border);border-radius:4px;padding:24px 26px;background:var(--background)}
+.pr-card>.eyebrow{color:var(--muted-foreground)}
+.pr-card h4{font-size:1.05rem;letter-spacing:-.02em;margin:12px 0 4px}
+.pr-card p{font-size:.875rem;color:var(--muted-foreground);margin:10px 0 0;line-height:1.7}
+.pr-cohort{font-size:3.2rem;letter-spacing:-.06em;font-weight:550;line-height:1.15;margin:14px 0 0;color:var(--primary)}
+.pr-cohort span{display:block;font-size:.8125rem;letter-spacing:0;color:var(--muted-foreground);font-weight:400;margin-top:6px}
+.pr-refusal .pr-cohort{color:var(--against)}
+.pr-paths{margin-top:18px}
+.pr-path{border-top:1px solid var(--border);padding:15px 0}
+.pr-path-head{display:flex;justify-content:space-between;align-items:baseline;gap:14px;font-size:.875rem;font-weight:600}
+.pr-path-head em{font-style:normal;font-weight:400;font-size:.75rem;color:var(--muted-foreground)}
+.pr-rates{display:flex;gap:26px;margin-top:11px;font-size:.8125rem;color:var(--muted-foreground)}
+.pr-rates strong{display:block;font-size:1.15rem;color:var(--foreground);font-weight:550;font-variant-numeric:tabular-nums;margin-top:3px;letter-spacing:-.02em}
+.pr-disagree{font-size:.8125rem;color:var(--against);background:var(--against-bg);padding:9px 12px;border-radius:2px;margin-top:12px;line-height:1.6}
+.pr-caveats{margin-top:22px;border-top:1px solid var(--border);padding-top:18px}
+.pr-caveats li{font-size:.8125rem;color:var(--muted-foreground);line-height:1.7;padding-bottom:7px}
+.pr-prior{margin-top:34px;border-left:2px solid var(--primary);background:var(--surface);padding:24px 30px}
+.pr-prior .eyebrow{color:var(--primary)}
+.pr-prior p{font-size:.9375rem;color:var(--muted-foreground);line-height:1.75;margin:13px 0 0;max-width:940px}
+.pr-prior strong{color:var(--foreground);font-weight:600}
+@media(max-width:1050px){.pr-premise{grid-template-columns:1fr;gap:26px}.pr-readout{grid-template-columns:1fr}.pr-table th:first-child,.pr-table td:first-child{padding-left:22px}}
+@media(max-width:760px){.pr-headline-top{padding:22px}.pr-table{display:block;overflow-x:auto;white-space:nowrap}.pr-card{padding:20px}.pr-cohort{font-size:2.6rem}.pr-rates{gap:18px}.pr-prior{padding:20px}}
