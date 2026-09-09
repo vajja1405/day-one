@@ -1,0 +1,601 @@
+{
+  "version": "shatter-degradation-v1",
+  "synthetic": true,
+  "generated_at": "2026-09-09T15:35:24.603679+00:00",
+  "as_of": "2026-09-06",
+  "seeds_per_level": 20,
+  "member_count": 12,
+  "modes": [
+    {
+      "mode": "identity_drift",
+      "label": "Identity drift"
+    },
+    {
+      "mode": "duplicate_encounters",
+      "label": "Duplicate encounters"
+    },
+    {
+      "mode": "stale_active_conflict",
+      "label": "Stale-active conflict"
+    },
+    {
+      "mode": "superseded_labs",
+      "label": "Superseded labs"
+    },
+    {
+      "mode": "medication_divergence",
+      "label": "Medication divergence"
+    },
+    {
+      "mode": "missing_linkage",
+      "label": "Missing linkage"
+    },
+    {
+      "mode": "coding_drift",
+      "label": "Coding drift"
+    },
+    {
+      "mode": "temporal_gap",
+      "label": "Temporal gaps"
+    },
+    {
+      "mode": "family_vs_personal",
+      "label": "Family vs personal history"
+    },
+    {
+      "mode": "negation_loss",
+      "label": "Negation loss"
+    }
+  ],
+  "curve": [
+    {
+      "severity": 0.0,
+      "runs": 240,
+      "pipeline_error_rate": 0.0,
+      "abstention_rate_on_unsupported": 1.0,
+      "false_finding_rate": 0.0,
+      "citation_integrity": 1.0,
+      "contradiction_detection_rate": 1.0,
+      "identity_resolution_accuracy": 1.0,
+      "mean_events": 0
+    },
+    {
+      "severity": 0.1,
+      "runs": 240,
+      "pipeline_error_rate": 0.0667,
+      "abstention_rate_on_unsupported": 0.9403,
+      "false_finding_rate": 0.0222,
+      "citation_integrity": 1.0,
+      "contradiction_detection_rate": 0.7659,
+      "identity_resolution_accuracy": 0.6917,
+      "mean_events": 2.34
+    },
+    {
+      "severity": 0.2,
+      "runs": 240,
+      "pipeline_error_rate": 0.1625,
+      "abstention_rate_on_unsupported": 0.8097,
+      "false_finding_rate": 0.0563,
+      "citation_integrity": 1.0,
+      "contradiction_detection_rate": 0.5568,
+      "identity_resolution_accuracy": 0.3958,
+      "mean_events": 4.66
+    },
+    {
+      "severity": 0.3,
+      "runs": 240,
+      "pipeline_error_rate": 0.2667,
+      "abstention_rate_on_unsupported": 0.6944,
+      "false_finding_rate": 0.0729,
+      "citation_integrity": 1.0,
+      "contradiction_detection_rate": 0.3864,
+      "identity_resolution_accuracy": 0.2042,
+      "mean_events": 7.15
+    },
+    {
+      "severity": 0.4,
+      "runs": 240,
+      "pipeline_error_rate": 0.3583,
+      "abstention_rate_on_unsupported": 0.5944,
+      "false_finding_rate": 0.084,
+      "citation_integrity": 1.0,
+      "contradiction_detection_rate": 0.2455,
+      "identity_resolution_accuracy": 0.1375,
+      "mean_events": 9.6
+    },
+    {
+      "severity": 0.5,
+      "runs": 240,
+      "pipeline_error_rate": 0.4708,
+      "abstention_rate_on_unsupported": 0.4764,
+      "false_finding_rate": 0.0875,
+      "citation_integrity": 1.0,
+      "contradiction_detection_rate": 0.1568,
+      "identity_resolution_accuracy": 0.0667,
+      "mean_events": 12.09
+    },
+    {
+      "severity": 0.6,
+      "runs": 240,
+      "pipeline_error_rate": 0.6,
+      "abstention_rate_on_unsupported": 0.3542,
+      "false_finding_rate": 0.0778,
+      "citation_integrity": 1.0,
+      "contradiction_detection_rate": 0.0727,
+      "identity_resolution_accuracy": 0.0208,
+      "mean_events": 14.69
+    },
+    {
+      "severity": 0.7,
+      "runs": 240,
+      "pipeline_error_rate": 0.7292,
+      "abstention_rate_on_unsupported": 0.2472,
+      "false_finding_rate": 0.0611,
+      "citation_integrity": 1.0,
+      "contradiction_detection_rate": 0.0273,
+      "identity_resolution_accuracy": 0.0083,
+      "mean_events": 17.45
+    },
+    {
+      "severity": 0.8,
+      "runs": 240,
+      "pipeline_error_rate": 0.825,
+      "abstention_rate_on_unsupported": 0.1653,
+      "false_finding_rate": 0.0417,
+      "citation_integrity": 1.0,
+      "contradiction_detection_rate": 0.0159,
+      "identity_resolution_accuracy": 0.0,
+      "mean_events": 20.15
+    },
+    {
+      "severity": 0.9,
+      "runs": 240,
+      "pipeline_error_rate": 0.8917,
+      "abstention_rate_on_unsupported": 0.1069,
+      "false_finding_rate": 0.0264,
+      "citation_integrity": 1.0,
+      "contradiction_detection_rate": 0.0068,
+      "identity_resolution_accuracy": 0.0,
+      "mean_events": 22.84
+    },
+    {
+      "severity": 1.0,
+      "runs": 240,
+      "pipeline_error_rate": 1.0,
+      "abstention_rate_on_unsupported": 0.0,
+      "false_finding_rate": 0.0,
+      "citation_integrity": 0.0,
+      "contradiction_detection_rate": 0.0,
+      "identity_resolution_accuracy": 0.0,
+      "mean_events": 26.04
+    }
+  ],
+  "per_mode": [
+    {
+      "mode": "negation_loss",
+      "label": "Negation loss",
+      "damage_score": 0.7364,
+      "metrics": {
+        "runs": 240,
+        "pipeline_error_rate": 0.0,
+        "abstention_rate_on_unsupported": 1.0,
+        "false_finding_rate": 0.1069,
+        "citation_integrity": 1.0,
+        "contradiction_detection_rate": 0.3705,
+        "identity_resolution_accuracy": 1.0,
+        "mean_events": 1.15
+      }
+    },
+    {
+      "mode": "stale_active_conflict",
+      "label": "Stale-active conflict",
+      "damage_score": 0.6273,
+      "metrics": {
+        "runs": 240,
+        "pipeline_error_rate": 0.0,
+        "abstention_rate_on_unsupported": 1.0,
+        "false_finding_rate": 0.0,
+        "citation_integrity": 1.0,
+        "contradiction_detection_rate": 0.3727,
+        "identity_resolution_accuracy": 1.0,
+        "mean_events": 1.15
+      }
+    },
+    {
+      "mode": "coding_drift",
+      "label": "Coding drift",
+      "damage_score": 0.3503,
+      "metrics": {
+        "runs": 240,
+        "pipeline_error_rate": 0.1583,
+        "abstention_rate_on_unsupported": 0.8944,
+        "false_finding_rate": 0.0,
+        "citation_integrity": 1.0,
+        "contradiction_detection_rate": 0.9136,
+        "identity_resolution_accuracy": 1.0,
+        "mean_events": 0.3
+      }
+    },
+    {
+      "mode": "family_vs_personal",
+      "label": "Family vs personal history",
+      "damage_score": 0.3084,
+      "metrics": {
+        "runs": 240,
+        "pipeline_error_rate": 0.0,
+        "abstention_rate_on_unsupported": 0.7944,
+        "false_finding_rate": 0.1028,
+        "citation_integrity": 1.0,
+        "contradiction_detection_rate": 1.0,
+        "identity_resolution_accuracy": 1.0,
+        "mean_events": 0.62
+      }
+    },
+    {
+      "mode": "superseded_labs",
+      "label": "Superseded labs",
+      "damage_score": 0.1227,
+      "metrics": {
+        "runs": 240,
+        "pipeline_error_rate": 0.0,
+        "abstention_rate_on_unsupported": 1.0,
+        "false_finding_rate": 0.0,
+        "citation_integrity": 1.0,
+        "contradiction_detection_rate": 0.8773,
+        "identity_resolution_accuracy": 1.0,
+        "mean_events": 0.23
+      }
+    },
+    {
+      "mode": "temporal_gap",
+      "label": "Temporal gaps",
+      "damage_score": 0.0568,
+      "metrics": {
+        "runs": 240,
+        "pipeline_error_rate": 0.0,
+        "abstention_rate_on_unsupported": 1.0,
+        "false_finding_rate": 0.0,
+        "citation_integrity": 1.0,
+        "contradiction_detection_rate": 0.9432,
+        "identity_resolution_accuracy": 1.0,
+        "mean_events": 0.35
+      }
+    },
+    {
+      "mode": "identity_drift",
+      "label": "Identity drift",
+      "damage_score": 0.0,
+      "metrics": {
+        "runs": 240,
+        "pipeline_error_rate": 0.0,
+        "abstention_rate_on_unsupported": 1.0,
+        "false_finding_rate": 0.0,
+        "citation_integrity": 1.0,
+        "contradiction_detection_rate": 1.0,
+        "identity_resolution_accuracy": 0.0208,
+        "mean_events": 2.53
+      }
+    },
+    {
+      "mode": "duplicate_encounters",
+      "label": "Duplicate encounters",
+      "damage_score": 0.0,
+      "metrics": {
+        "runs": 240,
+        "pipeline_error_rate": 0.0,
+        "abstention_rate_on_unsupported": 1.0,
+        "false_finding_rate": 0.0,
+        "citation_integrity": 1.0,
+        "contradiction_detection_rate": 1.0,
+        "identity_resolution_accuracy": 1.0,
+        "mean_events": 3.45
+      }
+    },
+    {
+      "mode": "medication_divergence",
+      "label": "Medication divergence",
+      "damage_score": 0.0,
+      "metrics": {
+        "runs": 240,
+        "pipeline_error_rate": 0.0,
+        "abstention_rate_on_unsupported": 1.0,
+        "false_finding_rate": 0.0,
+        "citation_integrity": 1.0,
+        "contradiction_detection_rate": 1.0,
+        "identity_resolution_accuracy": 1.0,
+        "mean_events": 0.68
+      }
+    },
+    {
+      "mode": "missing_linkage",
+      "label": "Missing linkage",
+      "damage_score": 0.0,
+      "metrics": {
+        "runs": 240,
+        "pipeline_error_rate": 0.0,
+        "abstention_rate_on_unsupported": 1.0,
+        "false_finding_rate": 0.0,
+        "citation_integrity": 1.0,
+        "contradiction_detection_rate": 1.0,
+        "identity_resolution_accuracy": 1.0,
+        "mean_events": 2.83
+      }
+    }
+  ],
+  "worst_mode": "negation_loss",
+  "walkthrough": {
+    "member_id": "SYN-007",
+    "severity": 0.6,
+    "seed": 7,
+    "events": 2,
+    "fired": {
+      "negation_loss": 2
+    },
+    "ground_truth": {
+      "ckd": "contradicted",
+      "chf": "contradicted",
+      "copd": "insufficient_evidence",
+      "diabetes": "contradicted",
+      "af": "contradicted",
+      "depression": "insufficient_evidence"
+    },
+    "pipeline_valid": true,
+    "predictions": {
+      "ckd": "contradicted",
+      "chf": "contradicted",
+      "copd": "insufficient_evidence",
+      "diabetes": "insufficient_evidence",
+      "af": "suggest_confirm",
+      "depression": "insufficient_evidence"
+    },
+    "citation_integrity": 1.0,
+    "identity_resolution_accuracy": 1.0,
+    "error": null,
+    "report": {
+      "version": "shatter-v1",
+      "synthetic": true,
+      "member_id": "SYN-007",
+      "severity": 0.6,
+      "seed": 7,
+      "requested_modes": [
+        "negation_loss"
+      ],
+      "original_sha256": "771c4e42dc2153244f5e3f4e8fb9687111d2a0f9d3ef6c57cf8fe560eca3b059",
+      "fragmented_sha256": "e01133b5568b8cf15c8b26c0dcb902661914882d6bd145af43d122c175e6e302",
+      "patches": [
+        {
+          "mode": "negation_loss",
+          "field": "source_documents",
+          "existed_before": true,
+          "before": [
+            {
+              "doc_id": "SYN-007-chf-history",
+              "doc_type": "encounter_note",
+              "date": "2026-02-12",
+              "excerpt": "SYNTHETIC. Historical outside note records a provisional concern for heart failure; current status was not established."
+            },
+            {
+              "doc_id": "SYN-007-chf-lab",
+              "doc_type": "lab_result",
+              "date": "2026-02-12",
+              "excerpt": "SYNTHETIC. BNP: 310 pg/mL; LOINC 30934-4. This isolated result cannot establish heart failure."
+            },
+            {
+              "doc_id": "SYN-007-ckd-history",
+              "doc_type": "encounter_note",
+              "date": "2026-02-12",
+              "excerpt": "SYNTHETIC. Historical outside note records a provisional concern for chronic kidney disease; current status was not established."
+            },
+            {
+              "doc_id": "SYN-007-ckd-lab",
+              "doc_type": "lab_result",
+              "date": "2026-02-12",
+              "excerpt": "SYNTHETIC. eGFR: 44 mL/min/1.73m2; LOINC 33914-3. This isolated result cannot establish chronic kidney disease."
+            },
+            {
+              "doc_id": "SYN-007-diabetes-history",
+              "doc_type": "encounter_note",
+              "date": "2026-02-12",
+              "excerpt": "SYNTHETIC. Historical outside note records a provisional concern for type 2 diabetes; current status was not established."
+            },
+            {
+              "doc_id": "SYN-007-diabetes-lab",
+              "doc_type": "lab_result",
+              "date": "2026-02-12",
+              "excerpt": "SYNTHETIC. Hemoglobin A1c: 7.4 %; LOINC 4548-4. This isolated result cannot establish type 2 diabetes."
+            },
+            {
+              "doc_id": "SYN-007-ckd-repeat",
+              "doc_type": "lab_result",
+              "date": "2026-07-20",
+              "excerpt": "SYNTHETIC. eGFR: 82 mL/min/1.73m2; LOINC 33914-3. Result reviewed in the subsequent clinician note."
+            },
+            {
+              "doc_id": "SYN-007-diabetes-repeat",
+              "doc_type": "lab_result",
+              "date": "2026-07-20",
+              "excerpt": "SYNTHETIC. Hemoglobin A1c: 5.4 %; LOINC 4548-4. Result reviewed in the subsequent clinician note."
+            },
+            {
+              "doc_id": "SYN-007-chf-review",
+              "doc_type": "encounter_note",
+              "date": "2026-07-21",
+              "excerpt": "SYNTHETIC. Follow-up cardiology review: heart failure ruled out following echocardiogram and clinical review; earlier BNP elevation was transient. Do not carry the historical suggestion forward."
+            },
+            {
+              "doc_id": "SYN-007-ckd-review",
+              "doc_type": "encounter_note",
+              "date": "2026-07-21",
+              "excerpt": "SYNTHETIC. Follow-up clinician review: chronic kidney disease ruled out; earlier low eGFR was transient during dehydration and has normalised on repeat testing. Do not carry the historical suggestion forward."
+            },
+            {
+              "doc_id": "SYN-007-diabetes-review",
+              "doc_type": "encounter_note",
+              "date": "2026-07-21",
+              "excerpt": "SYNTHETIC. Follow-up clinician review: type 2 diabetes ruled out on repeat testing; earlier hyperglycemia was transient during steroid treatment and resolved. Do not carry the historical suggestion forward."
+            },
+            {
+              "doc_id": "SYN-007-medications",
+              "doc_type": "med_list",
+              "date": "2026-08-10",
+              "excerpt": "SYNTHETIC. External medication list, active as recorded: acetaminophen. Indications, doses and current use need clinician reconciliation; a medication alone does not establish a condition."
+            },
+            {
+              "doc_id": "SYN-007-intake",
+              "doc_type": "encounter_note",
+              "date": "2026-08-25",
+              "excerpt": "SYNTHETIC. New-member intake. Outside records are partial; allergies, vaccination history, preventive screening history and member priorities still need reconciliation."
+            },
+            {
+              "doc_id": "SYN-007-shatter-family",
+              "doc_type": "encounter_note",
+              "date": "2026-08-14",
+              "excerpt": "SYNTHETIC. Clinician documents family history of copd."
+            },
+            {
+              "doc_id": "SYN-007-shatter-negation",
+              "doc_type": "encounter_note",
+              "date": "2026-08-14",
+              "excerpt": "SYNTHETIC. Clinician documents no evidence of atrial fibrillation."
+            }
+          ],
+          "after": [
+            {
+              "doc_id": "SYN-007-chf-history",
+              "doc_type": "encounter_note",
+              "date": "2026-02-12",
+              "excerpt": "SYNTHETIC. Historical outside note records a provisional concern for heart failure; current status was not established."
+            },
+            {
+              "doc_id": "SYN-007-chf-lab",
+              "doc_type": "lab_result",
+              "date": "2026-02-12",
+              "excerpt": "SYNTHETIC. BNP: 310 pg/mL; LOINC 30934-4. This isolated result cannot establish heart failure."
+            },
+            {
+              "doc_id": "SYN-007-ckd-history",
+              "doc_type": "encounter_note",
+              "date": "2026-02-12",
+              "excerpt": "SYNTHETIC. Historical outside note records a provisional concern for chronic kidney disease; current status was not established."
+            },
+            {
+              "doc_id": "SYN-007-ckd-lab",
+              "doc_type": "lab_result",
+              "date": "2026-02-12",
+              "excerpt": "SYNTHETIC. eGFR: 44 mL/min/1.73m2; LOINC 33914-3. This isolated result cannot establish chronic kidney disease."
+            },
+            {
+              "doc_id": "SYN-007-diabetes-history",
+              "doc_type": "encounter_note",
+              "date": "2026-02-12",
+              "excerpt": "SYNTHETIC. Historical outside note records a provisional concern for type 2 diabetes; current status was not established."
+            },
+            {
+              "doc_id": "SYN-007-diabetes-lab",
+              "doc_type": "lab_result",
+              "date": "2026-02-12",
+              "excerpt": "SYNTHETIC. Hemoglobin A1c: 7.4 %; LOINC 4548-4. This isolated result cannot establish type 2 diabetes."
+            },
+            {
+              "doc_id": "SYN-007-ckd-repeat",
+              "doc_type": "lab_result",
+              "date": "2026-07-20",
+              "excerpt": "SYNTHETIC. eGFR: 82 mL/min/1.73m2; LOINC 33914-3. Result reviewed in the subsequent clinician note."
+            },
+            {
+              "doc_id": "SYN-007-diabetes-repeat",
+              "doc_type": "lab_result",
+              "date": "2026-07-20",
+              "excerpt": "SYNTHETIC. Hemoglobin A1c: 5.4 %; LOINC 4548-4. Result reviewed in the subsequent clinician note."
+            },
+            {
+              "doc_id": "SYN-007-chf-review",
+              "doc_type": "encounter_note",
+              "date": "2026-07-21",
+              "excerpt": "SYNTHETIC. Follow-up cardiology review: heart failure ruled out following echocardiogram and clinical review; earlier BNP elevation was transient. Do not carry the historical suggestion forward."
+            },
+            {
+              "doc_id": "SYN-007-ckd-review",
+              "doc_type": "encounter_note",
+              "date": "2026-07-21",
+              "excerpt": "SYNTHETIC. Follow-up clinician review: chronic kidney disease ruled out; earlier low eGFR was transient during dehydration and has normalised on repeat testing. Do not carry the historical suggestion forward."
+            },
+            {
+              "doc_id": "SYN-007-diabetes-review",
+              "doc_type": "encounter_note",
+              "date": "2026-07-21",
+              "excerpt": "SYNTHETIC. Follow-up clinician review: type 2 diabetes  on repeat testing; earlier hyperglycemia was transient during steroid treatment and resolved. Do not carry the historical suggestion forward."
+            },
+            {
+              "doc_id": "SYN-007-medications",
+              "doc_type": "med_list",
+              "date": "2026-08-10",
+              "excerpt": "SYNTHETIC. External medication list, active as recorded: acetaminophen. Indications, doses and current use need clinician reconciliation; a medication alone does not establish a condition."
+            },
+            {
+              "doc_id": "SYN-007-intake",
+              "doc_type": "encounter_note",
+              "date": "2026-08-25",
+              "excerpt": "SYNTHETIC. New-member intake. Outside records are partial; allergies, vaccination history, preventive screening history and member priorities still need reconciliation."
+            },
+            {
+              "doc_id": "SYN-007-shatter-family",
+              "doc_type": "encounter_note",
+              "date": "2026-08-14",
+              "excerpt": "SYNTHETIC. Clinician documents family history of copd."
+            },
+            {
+              "doc_id": "SYN-007-shatter-negation",
+              "doc_type": "encounter_note",
+              "date": "2026-08-14",
+              "excerpt": "SYNTHETIC. Clinician documents atrial fibrillation."
+            }
+          ]
+        }
+      ],
+      "events": [
+        {
+          "mode": "negation_loss",
+          "target": "SYN-007-diabetes-review",
+          "description": "Negation span lost in the ingestion view; immutable original is kept by the report",
+          "original_span": "SYNTHETIC. Follow-up clinician review: type 2 diabetes ruled out on repeat testing; earlier hyperglycemia was transient during steroid treatment and resolved. Do not carry the historical suggestion forward.",
+          "corrupted_span": "SYNTHETIC. Follow-up clinician review: type 2 diabetes  on repeat testing; earlier hyperglycemia was transient during steroid treatment and resolved. Do not carry the historical suggestion forward.",
+          "original_value": "SYNTHETIC. Follow-up clinician review: type 2 diabetes ruled out on repeat testing; earlier hyperglycemia was transient during steroid treatment and resolved. Do not carry the historical suggestion forward.",
+          "corrupted_value": "SYNTHETIC. Follow-up clinician review: type 2 diabetes  on repeat testing; earlier hyperglycemia was transient during steroid treatment and resolved. Do not carry the historical suggestion forward.",
+          "original_source_doc_id": "SYN-007-diabetes-review"
+        },
+        {
+          "mode": "negation_loss",
+          "target": "SYN-007-shatter-negation",
+          "description": "Negation span lost in the ingestion view; immutable original is kept by the report",
+          "original_span": "SYNTHETIC. Clinician documents no evidence of atrial fibrillation.",
+          "corrupted_span": "SYNTHETIC. Clinician documents atrial fibrillation.",
+          "original_value": "SYNTHETIC. Clinician documents no evidence of atrial fibrillation.",
+          "corrupted_value": "SYNTHETIC. Clinician documents atrial fibrillation.",
+          "original_source_doc_id": "SYN-007-shatter-negation"
+        }
+      ],
+      "eligibility": {
+        "negation_loss": 4
+      },
+      "fired": {
+        "negation_loss": 2
+      },
+      "ground_truth": {
+        "ckd": "contradicted",
+        "chf": "contradicted",
+        "copd": "insufficient_evidence",
+        "diabetes": "contradicted",
+        "af": "contradicted",
+        "depression": "insufficient_evidence"
+      }
+    }
+  },
+  "limitations": [
+    "Every member, mutation, label and metric is synthetic and constructed for this regression harness.",
+    "The modes are inferred from published failure patterns and general domain reading, not from observing a payer's data.",
+    "A validation error means the current consumer rejected the fragmented bundle; it is counted as an ingestion failure.",
+    "Identity accuracy is 1 when no identity drift was applied and 0 when it was applied because Day One has no identity resolver.",
+    "The damage score only orders these ten declared modes; it is not a population prevalence or clinical severity estimate."
+  ]
+}
