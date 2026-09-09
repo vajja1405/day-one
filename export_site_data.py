@@ -36,6 +36,9 @@ def export(output: Path) -> dict:
     (output / "audit_sample.json").write_text(sample.model_dump_json(indent=2) + "\n")
     evaluation = run_evaluation(output=ROOT / "evaluation/results.json")
     (output / "evaluation.json").write_text(json.dumps(evaluation, indent=2) + "\n")
+    degradation = ROOT / "evaluation/degradation_results.json"
+    if degradation.exists():
+        (output / "degradation.json").write_text(degradation.read_text())
     (output / "manifest.json").write_text(json.dumps({"synthetic": True, "as_of": "2026-09-06", "default_member": "SYN-007", "member_count": len(summaries), "schema_version": "0.1.0", "confidence_note": "Uncalibrated heuristic confidence in record status, not disease probability.", "mode": "precomputed offline fixtures; no API key or backend"}, indent=2) + "\n")
     return evaluation
 

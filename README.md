@@ -32,6 +32,12 @@ flowchart LR
 
 The normal demonstration runs entirely in deterministic mode. Optional LLM calls are a constrained shadow check on unresolved candidates; they do not improve or change the shipped fixture decisions. The adapter accepts an OpenAI-compatible endpoint, validates JSON output, retries once, and retains the baseline on failure. Live provider compatibility and semantic model retrieval are not validated by the offline evaluation.
 
+### Shatter: the adversarial layer
+
+`shatter/` is a separate, MIT-licensed harness for testing the ingestion boundary. It starts with the same clean synthetic record, applies a seeded severity from `0.0` to `1.0`, and returns a public fragmented bundle plus a hash-checked `FragmentationReport`. Ten declared modes cover identity drift, duplicate encounters, stale-active conflict, superseded labs, medication divergence, missing linkage, coding drift, temporal gaps, family-versus-personal history, and negation loss. Each event records its target, source document, before/after value or text span, and a reversible patch; private ground-truth context is stripped before Day One sees the fragment.
+
+The harness does not change the clinical pipeline. `evaluation/degradation.py` runs every severity step over 12 synthetic members and 20 seeds, calls the actual pipeline, and writes `evaluation/degradation_results.json` plus `evaluation/degradation.svg`. Pipeline errors remain visible in the metrics rather than being discarded. Run `make degrade` to regenerate the sweep. The published site includes the precomputed curve and a mode-isolated ranking.
+
 ## Evaluation
 
 The 30 labels span all 12 members: 8 supported, 8 absent, 6 contradicted, 4 adversarial, and 4 stale/superseded. Four stale cases expect `contradicted` because later records explicitly supersede them.
@@ -56,6 +62,8 @@ The 30 labels span all 12 members: 8 supported, 8 absent, 6 contradicted, 4 adve
 
 Already-documented suppression is covered by separate tests and the two charted fixtures. Citation checks establish exact source inclusion and date consistency, not clinical truth. Confidence is a heuristic for the predicted **record status**, not a disease probability. The reliability chart and ECE describe these same constructed fixtures; no calibration fitting was performed. Local latency measurements and full per-case outputs are in `evaluation/results.json`. The unsafe-suggestion metric raises and fails evaluation if above zero.
 
+The separate Shatter sweep is intentionally a stress test rather than a second clinical score. In the 20-seed run, negation loss is the worst measured mode: contradiction detection is 37.05% and false findings are 10.69% in mode-isolated runs. Stale-active conflict is next at 37.27% contradiction detection. Coding drift creates a 15.83% pipeline-error rate because strict code validation rejects unmapped local codes. Citation integrity remains 100% in the harness, which checks source linkage rather than clinical truth. See [`evaluation/FINDINGS.md`](evaluation/FINDINGS.md) for the full reading and the exact walkthrough.
+
 ## Quickstart
 
 Python 3.11+; tested here on Python 3.12. Use a virtual environment. Initial dependency installation requires network access or a prepared wheel cache. The subsequent generate/run/eval/export/test commands require no network or API key.
@@ -67,6 +75,7 @@ make install
 make generate
 make run
 make eval
+make degrade
 make test
 make export
 ```

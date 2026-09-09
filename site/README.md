@@ -17,6 +17,6 @@ npm run deploy
 
 `npm run build:offline` creates `offline-dist/day-one-offline.html`. The original backup remains `../day-one-offline.html` and is included in every normal deployment. Open it directly from your laptop with no network.
 
-Build hooks consolidate `public/data/` into `app/demo-data.json`. The Python pipeline, generator, audit records, 30-case evaluation and tests live at the repository root. Run `make export` there to refresh the site's data, then rebuild here.
+Build hooks consolidate `public/data/` into `app/demo-data.json`. The Python pipeline, generator, audit records, 30-case evaluation, Shatter degradation sweep and tests live at the repository root. Run `make export` and `make degrade` there to refresh the site's data, then rebuild here. `public/data/degradation.json` is a checked-in snapshot so the slider has no runtime dependency.
 
 Scores are uncalibrated heuristics. The evaluation is synthetic regression coverage, not clinical validation.
